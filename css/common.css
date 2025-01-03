@@ -1,0 +1,65 @@
+@import url('normalize.css');
+@import url('reset.css');
+
+
+/* Variable */
+:root {
+    --xxlgfz: 48px;
+    --xlgfz: 36px;
+    --lgfz: 28px;
+    --dffz: 24px;
+    --bodyfz: 16px;
+    --smfz: 12px;
+    --gutter: 31px;
+    --conGutter: 150px;
+    --pgGutter: 220px;
+    --white: #ffffff;
+    --primary: #8685EF;
+    --secondary: #272533;
+    --baseWhite: #FAF7FF;
+    --textGray: #C9C9C9;
+    --baseGray: #121212;
+    --light_gray: #EBEBEB;
+    --medium_gray: #A0A0A0;
+    --black: #000000;
+}
+
+/* LayOut */
+
+.hidden {
+    display: none !important;
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    clip-path: inset(0 0 100% 100%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.btn {
+    background: var(--white);
+    color: var(--black);
+    line-height: 38px;
+    padding: 0 45px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+    border-width: 1px;
+    border-color: var(--primary);
+}
+
+.btn:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* Typography */
+body {
+  font: var(--bodyfz)/var(--gutter) "IBM Plex Sans KR", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+/* RESPONSIVE */
+
