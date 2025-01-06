@@ -24,6 +24,9 @@ header nav ul > li > ul > li{
   line-height: 79px;
   text-transform: uppercase;
 }
+header nav ul > li > ul > li > a{
+  font-size: 24px;
+}
 header nav .logo{
   text-indent: -9999em;
   width: 160px;
@@ -104,5 +107,8 @@ header nav .logo{
 }
 .dropdown-item{
   padding: 10px 25px;
-  
+}
+/* Main */
+.main h1{
+  font-size: ;
 }

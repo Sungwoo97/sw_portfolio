@@ -67,7 +67,13 @@ a{
 body {
   font: var(--bodyfz)/var(--gutter) "IBM Plex Sans KR", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   background: #121212;
+	color: var(--textGray)
 }
 
 /* RESPONSIVE */
+@media (max-width:1344px) {
+  .container{
+    width: 100%;
+  }
+}
 
