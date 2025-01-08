@@ -1,4 +1,4 @@
-
+/* 풀페이지 레이아웃 */
 let currentSection = 0;
 const sections = document.querySelectorAll("section");
 let isScrolling = false; 
@@ -47,7 +47,7 @@ window.onbeforeunload = () => {
   window.scrollTo(0, 0);
 };
 
-
+/* 메인 페이지 타이핑 효과 */
 function typeText(element, text, speed, callback) {
   let index = 0;
   const interval = setInterval(() => {
@@ -60,7 +60,7 @@ function typeText(element, text, speed, callback) {
   }, speed);
 }
 
-/* 메인 페이지 타이핑 효과 */
+
 function eraseText(element, text, speed, callback) {
   let index = text.length;
   const interval = setInterval(() => {
