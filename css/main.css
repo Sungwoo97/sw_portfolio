@@ -303,7 +303,7 @@ line{
   object-fit: cover;
 }
 .about .content > div{
-  margin-top: 200px;
+  margin-top: 150px;
   width: 30%;
   display: flex;
   flex-direction: column;
