@@ -47,3 +47,65 @@ window.onbeforeunload = () => {
   window.scrollTo(0, 0);
 };
 
+
+function typeText(element, text, speed, callback) {
+  let index = 0;
+  const interval = setInterval(() => {
+    element.textContent += text[index];
+    index++;
+    if (index === text.length) {
+      clearInterval(interval);
+      callback();
+    }
+  }, speed);
+}
+
+/* 메인 페이지 타이핑 효과 */
+function eraseText(element, text, speed, callback) {
+  let index = text.length;
+  const interval = setInterval(() => {
+    element.textContent = text.slice(0, index);
+    index--;
+    if (index === -1) {
+      clearInterval(interval);
+      callback();
+    }
+  }, speed);
+}
+
+function startAnimation() {
+  const textElement = document.querySelector('.text');
+
+  typeText(textElement, 'SUNG WOO', 400, () => {
+    setTimeout(() => {
+      eraseText(textElement, 'SUNG WOO', 200, () => {
+        setTimeout(() => {
+          typeText(textElement, 'SOFT WEB', 400, () => {
+            setTimeout(() => {
+              eraseText(textElement, 'SOFT WEB', 200, () => {
+                setTimeout(startAnimation, 1000);
+              });
+            }, 2000);
+          });
+        }, 2000);
+      });
+    }, 2000);
+  });
+}
+
+setTimeout(()=>{
+  startAnimation();
+
+}, 3000)
+
+// 성장 멘트 슬라이드
+$('.growUp').slick({
+  infinite: true,
+  speed: 300,
+  vertical: true,
+  autoplay: true,
+  autoplaySpeed: 4000,
+  dots: false,
+  prevArrow: false,
+  nextArrow: false,
+});
