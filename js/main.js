@@ -4,11 +4,15 @@ const sections = document.querySelectorAll("section");
 let isScrolling = false;
 const scrollDelay = 1000;
 const experienceSection = document.querySelector(".experience");
-const timelineContainer = document.querySelector(".timeline.container");
+const timelineContainer = document.querySelector(".timeline");
+const timelineSpan = timelineContainer.querySelector('span');
+const timelineEvent = timelineContainer.querySelectorAll('.event');
+
 
 // 화면 크기 변경 시 스크롤 위치 재조정
 window.addEventListener("resize", () => {
   scrollToSection(currentSection);
+  timelineBar();
 });
 
 // 휠 이벤트가 생기면 
@@ -46,7 +50,7 @@ document.addEventListener("wheel", (event) => {
       scrollToSection(currentSection); // 섹션 이동
     }
   }
-});
+}, { passive: false });
 
 // 섹션 이동 함수
 function scrollToSection(sectionIndex) {
@@ -91,7 +95,13 @@ function scrollToPreviousSection() {
 window.onbeforeunload = () => {
   window.scrollTo(0, 0);
 };
+//타임라인 바 계산
+function timelineBar(){
 
+  timelineSpan.style.height = 134 * timelineEvent.length + (85 * 2)  + 'px';
+
+}
+timelineBar();
 
 /* 메인 페이지 타이핑 효과 */
 function typeText(element, text, speed, callback) {
