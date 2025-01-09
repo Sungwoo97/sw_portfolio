@@ -25,87 +25,76 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.min.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
   <style>
-   div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  font-size: 2rem;
-}
+    body{
+      margin: 0;
+    }
+ [data-scroll-container] {
+      overflow: hidden;
+    }
+
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .section-1 {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    }
+
+    .section-2 {
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    }
+
+    .section-3 {
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    }
+
+    .parallax {
+      font-size: 2rem;
+      color: #000;
+    }
   </style>
 </head>
 <body>
-  <div class="text-container">
-    <p id="text"></p>
-    <p class="typeText"></p>
+  <div data-scroll-container>
+    <section class="section-1" data-scroll-section>
+      <h1 data-scroll data-scroll-speed="2">Scroll Faster</h1>
+    </section>
+    <section class="section-2" data-scroll-section>
+      <h1 class="parallax" data-scroll data-scroll-speed="-2">Scroll Slower</h1>
+    </section>
+    <section class="section-3" data-scroll-section>
+      <h1 data-scroll>Locomotive Scroll Demo</h1>
+    </section>
   </div>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/TextPlugin.min.js"></script>
+  <script src="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+
 
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
 
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    function typeText(element, text, speed, callback) {
-    let index = 0;
-    const interval = setInterval(() => {
-      element.textContent += text[index];
-      index++;
-      if (index === text.length) {
-        clearInterval(interval);
-        callback();
-      }
-    }, speed);
-  }
-
-  function eraseText(element, text, speed, callback) {
-    let index = text.length;
-    const interval = setInterval(() => {
-      element.textContent = text.slice(0, index);
-      index--;
-      if (index === -1) {
-        clearInterval(interval);
-        callback();
-      }
-    }, speed);
-  }
-
-  function startAnimation() {
-    const textElement = document.getElementById('text');
-
-    // Step 1: Type "sungwoo"
-    typeText(textElement, 'SUNG WOO', 150, () => {
-      // Step 2: Erase "sungwoo" after 2 seconds
-      setTimeout(() => {
-        eraseText(textElement, 'SUNG WOO', 100, () => {
-          // Step 3: Type "soft web" after 2 seconds
-          setTimeout(() => {
-            typeText(textElement, 'SOFT WEB', 150, () => {
-              // Step 4: Erase "soft web" after 2 seconds
-              setTimeout(() => {
-                eraseText(textElement, 'SOFT WEB', 100, () => {
-                  // Repeat the animation
-                  setTimeout(startAnimation, 1000);
-                });
-              }, 2000);
-            });
-          }, 2000);
-        });
-      }, 2000);
+  const scroll = new LocomotiveScroll({
+      el: document.querySelector('[data-scroll-container]'),
+      smooth: true
     });
-  }
-
-  // Start the animation
-  startAnimation();
-});
 </script>
 </body>
 
