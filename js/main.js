@@ -132,9 +132,9 @@ function eraseText(element, text, speed, callback) {
 function startAnimation() {
   const textElement = document.querySelector('.text');
 
-  typeText(textElement, 'SUNG WOO', 400, () => {
+  typeText(textElement, 'FRONT-END', 400, () => {
     setTimeout(() => {
-      eraseText(textElement, 'SUNG WOO', 200, () => {
+      eraseText(textElement, 'FRONT-END', 200, () => {
         setTimeout(() => {
           typeText(textElement, 'SOFT WEB', 400, () => {
             setTimeout(() => {

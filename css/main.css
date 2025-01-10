@@ -338,6 +338,7 @@ line{
 }
 /* Experience */
  .experience .content{
+  margin-bottom: 100px;
   position: relative;
   width: 100%;
   height: 100%;
@@ -355,7 +356,8 @@ line{
   top: 0;
 }
 .timeline {
-  border-top: 1px solid var(--textGray);
+  border-top: 2px solid var(--textGray);
+  border-bottom: 2px solid var(--textGray);
   max-height: 70%; 
   overflow-y: auto; 
   padding: 85px 1rem ;
@@ -413,24 +415,43 @@ line{
 /* ProjectList */
 .projectList{
   margin-top: 81px;
+  margin-bottom: 100px;
 }
 .projectList .content{
   position: relative;
 }
 .projectList h4{
-  height: 20%;
+  height: 220px;
   font-size: 24px;
   line-height: 31px;
   padding-top: 5%;
   text-align: center;
   color: var(--textGray);
 }
+.listWrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
 .listSlides{
   background: #1e1e1e;
   height: 400px;
   display: flex;
 }
+.listSlides > div{
+  padding-left: 0;
+  padding-right: 0;
+}
+.listSlides:nth-child(even){
+  flex-direction: row-reverse;
+  margin-left: auto;
 
+  .info{
+    align-items: flex-end;
+  }
+
+
+}
 .listSlides img{
   width: 100%;
   height: 400px;
@@ -462,25 +483,9 @@ line{
   content: '-';
   display: inline-block;
 }
-.listSlides .slick-slide {
-  display: flex ;
-}
-.projectList .controls .prev,
-.projectList .controls .next{
-  position: absolute;
-  top: 60%;
-  font-size: 100px;
-  cursor: pointer;
-}
-.projectList .controls .prev{
-  right: calc(100% + 50px);
-}
-.projectList .controls .next{
-  left: calc(100% + 50px);
-}
 /* MiniProject */
 .minimalList h4{
-  height: 20%;
+  height: 220px;
   font-size: 24px;
   line-height: 31px;
   padding-top: 5%;
@@ -538,4 +543,79 @@ line{
 }
 .minimalList .controls .next{
   left: calc(100% + 50px);
+}
+/* Contact */
+.contact .content{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+.contact h4{
+  height: 220px;
+  font-size: 24px;
+  line-height: 31px;
+  padding-top: 5%;
+  text-align: center;
+  color: var(--textGray);
+}
+.contact .myInfo{
+    background: #1e1e1e;
+    padding: 105px 30px;
+    border: 1px solid #6e6e6e;
+}
+.contact .myInfo dt{
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--textGray);
+  margin-bottom: 5px;
+}
+.contact .myInfo dd{
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.contact .myInfo dd:last-child{
+  margin-bottom: 0;
+}
+.contact form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact input{
+  width: 100%;
+  height: 80px;
+  border: 1px solid #6e6e6e;
+  background: #1e1e1e;
+  color: var(--textGray);
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 700;
+  padding: 20px 30px;
+}
+.contact input:focus{
+  outline: 2px solid var(--secondary);
+  outline-offset: 1px;
+}
+.contact textarea{
+  width: 100%;
+  height: 160px;
+  border: 1px solid #6e6e6e;
+  background: #1e1e1e;
+  color: var(--textGray);
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 700;
+  padding: 20px 30px;
+}
+.contact textarea:focus{
+  outline: 2px solid var(--secondary);
+  outline-offset: 1px;
 }
