@@ -171,6 +171,6 @@ $('.listSlides').slick({
   slidesToShow: 1, // 보여줄 슬라이드 수
   slidesToScroll: 1, // 스크롤 시 넘어갈 슬라이드 수
   dots: false,
-  prevArrow: false,
-  nextArrow: false,
+  prevArrow: $('.projectList .controls .prev'),
+  nextArrow: $('.projectList .controls .next'),
 });

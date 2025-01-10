@@ -155,7 +155,7 @@ line{
   justify-content: end;
   position: relative;
 }
-.slick-list{
+.main .slick-list{
   width: 1200px;
   text-align: right;
 }
@@ -342,7 +342,7 @@ line{
   height: 100%;
 }
 .experience h4 {
-  height: 30vh;
+  height: 20vh;
   font-size: 24px;
   line-height: 31px;
   padding-top: 5%;
@@ -389,7 +389,6 @@ line{
   margin-bottom: 5px;
   color: #fff;
 }
-
 .event .details {
   font-size: 16px;
   line-height: 1.5;
@@ -398,15 +397,80 @@ line{
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* 섹션 자체는 스크롤 방지 */
+  overflow: hidden; 
 }
-
-/* 스크롤바 스타일 (선택사항) */
 .timeline::-webkit-scrollbar {
   width: 10px;
 }
-
 .timeline::-webkit-scrollbar-thumb {
   background-color: transparent;
+}
+/* ProjectList */
+.projectList{
+  margin-top: 81px;
+}
+.projectList .content{
+  position: relative;
+}
+.projectList h4{
+  height: 20vh;
+  font-size: 24px;
+  line-height: 31px;
+  padding-top: 5%;
+  text-align: center;
+  color: var(--textGray);
+}
+.listSlides{
+  background: #1e1e1e;
+  height: 400px;
+  display: flex;
+}
+
+.listSlides img{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.listSlides h5{
+  color: var(--white);
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 700;
+}
+.listSlides .info{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.listSlides p{
+  color: var(--textGray);
+  font-size: 16px;
+  line-height: 21px;
+}
+.listSlides ul li{
+  color: var(--textGray);
+  font-size: 16px;
+  line-height: 21px;
+}
+.listSlides ul li:before{
+  content: '-';
+  display: inline-block;
+}
+.listSlides .slick-slide {
+  display: flex ;
+}
+.projectList .controls .prev,
+.projectList .controls .next{
+  position: absolute;
+  top: 60%;
+  font-size: 100px;
+  cursor: pointer;
+}
+.projectList .controls .prev{
+  right: calc(100% + 50px);
+}
+.projectList .controls .next{
+  left: calc(100% + 50px);
 }
 
