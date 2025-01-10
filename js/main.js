@@ -165,3 +165,12 @@ $('.growUp').slick({
   prevArrow: false,
   nextArrow: false,
 });
+
+// 성장 멘트 슬라이드
+$('.listSlides').slick({
+  slidesToShow: 1, // 보여줄 슬라이드 수
+  slidesToScroll: 1, // 스크롤 시 넘어갈 슬라이드 수
+  dots: false,
+  prevArrow: false,
+  nextArrow: false,
+});
