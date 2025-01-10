@@ -59,13 +59,13 @@
 }
 
 body{
-  overflow: hidden; 
+  /* overflow: hidden;  */
 }
 
 section{
-
+/* 
   width: 100vw; 
-  height: 100vh; 
+  height: 100vh;  */
 
   font-size: 2rem; 
   color: #fff;
