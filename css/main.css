@@ -292,20 +292,24 @@ line{
 /* About */
 .about{
   margin-top: 81px;
+  padding: 30px;
+
 }
 .about .content{
-  display: flex;
-  gap: 130px;
-  justify-content: start;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+  gap: 60px;
 }
-.about .content > img{
-  width: 40%;
+.about .profile{
+  height: 350px;
+}
+.about .profile  img{
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.about .content > div{
-  margin-top: 150px;
-  width: 30%;
+.about .content > .desc{
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -335,6 +339,10 @@ line{
   display: flex;
   gap: 20px;
   margin-top: 50px;
+}
+/* Skill */
+.skill{
+
 }
 /* Experience */
  .experience .content{
