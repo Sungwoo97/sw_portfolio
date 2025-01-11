@@ -166,12 +166,23 @@ $('.growUp').slick({
   nextArrow: false,
 });
 
-// 성장 멘트 슬라이드
-
+// 미니 프로젝트 슬라이드
 $('.miniCard').slick({
   slidesToShow: 3, // 보여줄 슬라이드 수
   slidesToScroll: 1, // 스크롤 시 넘어갈 슬라이드 수
   dots: false,
   prevArrow: $('.minimalList .controls .prev'),
   nextArrow: $('.minimalList .controls .next'),
+});
+
+// 스킬 태그 패럴렉스 효과
+const parallaxContainer = document.getElementById("parallax-container");
+  new Parallax(parallaxContainer);
+
+//프로젝트 목록 AOS 효과
+AOS.init({
+  // 선택 사항: 초기화 시 적용할 설정 옵션
+  duration: 1000,  // 애니메이션 지속 시간 (밀리초 단위)
+  easing: 'ease-in-out',  // 애니메이션 효과
+  once: true,  // 스크롤 시 한 번만 애니메이션 실행
 });
