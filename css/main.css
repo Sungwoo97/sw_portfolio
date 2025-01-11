@@ -480,6 +480,7 @@ line{
 .timeline::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
+
 /* ProjectList */
 .projectList{
   margin-top: 81px;

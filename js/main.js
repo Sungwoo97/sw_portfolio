@@ -186,3 +186,4 @@ AOS.init({
   easing: 'ease-in-out',  // 애니메이션 효과
   once: true,  // 스크롤 시 한 번만 애니메이션 실행
 });
+
