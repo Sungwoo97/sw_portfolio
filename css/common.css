@@ -18,6 +18,8 @@
     --white: #ffffff;
     --primary: #8685EF;
     --secondary: #272533;
+    --hightlight: ##008be9;
+    --hover: #6467cd;
     --baseWhite: #FAF7FF;
     --textGray: #C9C9C9;
     --baseGray: #121212;
@@ -53,7 +55,7 @@
 }
 
 .btn:hover {
-    background: var(--secondary);
+    background: var(--hover);
 
 }
 
@@ -90,4 +92,7 @@ body {
     width: 100%;
   }
 }
-
+/* SCROLL */
+body::-webkit-scrollbar{
+  width: 0px;
+}
