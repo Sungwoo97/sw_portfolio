@@ -120,7 +120,9 @@ header nav .logo{
   flex-direction: column;
   gap: 15%;
   height: 100vh;
+  position: relative;
 }
+
 .main h2{
   font-size: 36px;
   font-weight: 700;

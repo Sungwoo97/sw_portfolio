@@ -68,7 +68,6 @@
   </header>
   <main>
     <section class="main">
-      
       <div class="content">
         <svg width="300" height="5" viewBox="0 0 300 5" xmlns="http://www.w3.org/2000/svg">
           <line x1="0" y1="2.5" x2="300" y2="2.5" stroke-dasharray="300" stroke-dashoffset="300">
@@ -413,10 +412,29 @@
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
  <script src="./js/main.js"></script>
  <script>
 
+ var setVanta = ()=>{
+ if (window.VANTA) window.VANTA.NET({
+    el: ".main",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: '#6e6e6e',
+    backgroundColor: '#121212',
+    points: 20.00,
+    spacing: 20.00
+  })
+ }
+  setVanta();
  </script>
 </body>
 
