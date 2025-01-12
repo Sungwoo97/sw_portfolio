@@ -424,8 +424,7 @@ section.bg{
   display: flex;
 }
 .listSlides > div{
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
 }
 .listSlides:nth-child(even){
   flex-direction: row-reverse;
@@ -448,9 +447,44 @@ section.bg{
     }
   }
 }
+.listSlides .thumbnail{
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+.listSlides .thumbnail::after{
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  text-align: center;
+  opacity: 0;
+}
+.listSlides .thumbnail:hover::after{
+  opacity: .5;
+}
+.hover_btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  display: none;
+  z-index: 10;
+}
+.listSlides .thumbnail:hover .hover_btn{
+  display: block;
+  opacity: 1;
+}
 .listSlides img{
   width: 100%;
-  height: 400px;
+  height: 100%;
   object-fit: cover;
 }
 .listSlides h5{
@@ -482,6 +516,7 @@ section.bg{
 }
 .listSlides .gitLink{
   display: flex;
+  align-items: center;
   position: absolute;
   bottom: 5%;
   right: 5%;
@@ -495,6 +530,11 @@ section.bg{
   img{
     width: 100%;
     height: 100%;
+  }
+  i{
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--primary);
   }
 }
 /* MiniProject */
