@@ -200,39 +200,14 @@
               <p>웹디자인 & 프론트엔드 SW 개발자 양성과정 수료</p>
             </div>
           </div>
-          <div class="event">
-            <div class="date">2025.01</div>
-            <div class="details">
-              <p>그린컴퓨터아트학원</p>
-              <p>웹디자인 & 프론트엔드 SW 개발자 양성과정 수료</p>
-            </div>
-          </div>
-          <div class="event">
-            <div class="date">2025.01</div>
-            <div class="details">
-              <p>그린컴퓨터아트학원</p>
-              <p>웹디자인 & 프론트엔드 SW 개발자 양성과정 수료</p>
-            </div>
-          </div>
-          <div class="event">
-            <div class="date">2025.01</div>
-            <div class="details">
-              <p>그린컴퓨터아트학원</p>
-              <p>웹디자인 & 프론트엔드 SW 개발자 양성과정 수료</p>
-            </div>
-          </div>
-          <div class="event">
-            <div class="date">2025.01</div>
-            <div class="details">
-              <p>그린컴퓨터아트학원</p>
-              <p>웹디자인 & 프론트엔드 SW 개발자 양성과정 수료</p>
-            </div>
-          </div>
         </div>
     </section>
-    <section >
-      <div class="parallax-window effect1" data-parallax="scroll" data-image-src="./img/dev_env.png" data-speed="1.5">
-        
+    <section class="bg">
+      <div class="middle_bg" data-rellax-container>
+        <!-- 배경 이미지 -->
+        <img class="rellax" src="./img/dev_env.png" data-rellax-speed="-10" alt="Parallax Background">
+        <!-- 섹션 콘텐츠 -->
+        <h1>Scroll to See the Effect</h1>
       </div>
     </section>
     <section class="projectList container">
@@ -415,6 +390,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
  <script src="./js/main.js"></script>
  <script>
 
@@ -435,6 +411,10 @@
   })
  }
   setVanta();
+  const rellax = new Rellax('.rellax', {
+    round: true, // 위치값 반올림
+    center:true,
+});
  </script>
 </body>
 

@@ -482,6 +482,37 @@ line{
 .timeline::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
+/* bg */
+section.bg{
+  overflow-x: hidden;
+} 
+ .middle_bg {
+      position: relative;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      h1{
+        z-index: 2;
+      }
+      img {
+        max-width: none;
+      }
+    }
+
+    .middle_bg .rellax {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      z-index: 1;
+      
+    }
+
+   
+ 
+    
+
 
 /* ProjectList */
 .projectList{
