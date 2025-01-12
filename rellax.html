@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rellax.js Parallax Example</title>
+  <style>
+    /* 기본 스타일 설정 */
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .section {
+      position: relative;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .rellax {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      z-index: 1;
+    }
+    h1{
+      z-index: 2;
+    }
+
+    /* 이미지 크기 조정 */
+    img {
+      max-width: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="section" data-rellax-container>
+    <!-- 배경 이미지 -->
+    <img class="rellax" src="./img/dev_env.png" data-rellax-speed="-2" alt="Parallax Background">
+    <!-- 섹션 콘텐츠 -->
+    <h1>Scroll to See the Effect</h1>
+  </div>
+
+  <div class="section" data-rellax-container>
+    <!-- 다른 섹션 -->
+    <img class="rellax" src="./img/dev_env.png" data-rellax-speed="-3" alt="Parallax Background">
+    <h1>Another Section</h1>
+  </div>
+  <div class="section" data-rellax-container>
+    <!-- 배경 이미지 -->
+    <img class="rellax" src="./img/dev_env.png" data-rellax-speed="-2" alt="Parallax Background">
+    <!-- 섹션 콘텐츠 -->
+    <h1>Scroll to See the Effect</h1>
+  </div>
+
+  <div class="section" data-rellax-container>
+    <!-- 다른 섹션 -->
+    <img class="rellax" src="./img/dev_env.png" data-rellax-speed="-3" alt="Parallax Background">
+    <h1>Another Section</h1>
+  </div>
+  <div class="section" data-rellax-container>
+    <!-- 배경 이미지 -->
+    <img class="rellax" src="./img/dev_env.png" data-rellax-speed="-2" alt="Parallax Background">
+    <!-- 섹션 콘텐츠 -->
+    <h1>Scroll to See the Effect</h1>
+  </div>
+
+  <div class="section" data-rellax-container>
+    <!-- 다른 섹션 -->
+    <img class="rellax" src="./img/dev_env.png" data-rellax-speed="-3" alt="Parallax Background">
+    <h1>Another Section</h1>
+  </div>
+  <div class="section" data-rellax-container>
+    <!-- 배경 이미지 -->
+    <img class="rellax" src="./img/dev_env.png" data-rellax-speed="-2" alt="Parallax Background">
+    <!-- 섹션 콘텐츠 -->
+    <h1>Scroll to See the Effect</h1>
+  </div>
+
+  <div class="section" data-rellax-container>
+    <!-- 다른 섹션 -->
+    <img class="rellax" src="./img/dev_env.png" data-rellax-speed="-3" alt="Parallax Background">
+    <h1>Another Section</h1>
+  </div>
+
+  <!-- Rellax.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+
+  <script>
+    // Rellax.js 초기화
+    const rellax = new Rellax('.rellax', {
+      center: false, // 중앙 정렬 비활성화
+      round: true, // 위치값 반올림
+      vertical: true, // 수직 Parallax 효과 활성화
+      horizontal: false // 수평 Parallax 효과 비활성화
+    });
+  </script>
+</body>
+</html>
