@@ -11,99 +11,35 @@ const timelineEvent = timelineContainer.querySelectorAll('.event');
 
 // 화면 크기 변경 시 스크롤 위치 재조정
 window.addEventListener("resize", () => {
-  // scrollToSection(currentSection);
   timelineBar();
 });
 
-// // 휠 이벤트가 생기면 
-// document.addEventListener("wheel", (event) => {
-//   // 스크롤 중일 때는 무시
-//   if (isScrolling) return;
+//메인 배경 텍스처 라이브러리
+var setVanta = ()=>{
+  if (window.VANTA) window.VANTA.NET({
+     el: ".main",
+     mouseControls: true,
+     touchControls: true,
+     gyroControls: false,
+     minHeight: 200.00,
+     minWidth: 200.00,
+     scale: 1.00,
+     scaleMobile: 1.00,
+     color: '#6e6e6e',
+     backgroundColor: '#121212',
+     points: 20.00,
+     spacing: 20.00
+   })
+  }
+setVanta();
 
-//   const direction = event.deltaY > 0 ? 1 : -1; // 스크롤 방향
-
-//   // 경험 섹션에서만 개별 스크롤을 처리
-//   if (experienceSection.contains(event.target)) {
-//     const isAtTop = timelineContainer.scrollTop === 0 && event.deltaY < 0;
-//     const isAtBottom =
-//       timelineContainer.scrollHeight - timelineContainer.scrollTop ===
-//         timelineContainer.clientHeight && event.deltaY > 0;
-
-//     // 타임라인 섹션에서 스크롤이 끝까지 내려가면 풀페이지로 이동
-//     if (isAtBottom) {
-//       event.preventDefault(); // 기본 스크롤 방지
-//       scrollToNextSection(); // 다음 섹션으로 이동
-//     }
-
-//     // 타임라인 섹션에서 위로 스크롤할 때 풀페이지로 이동
-//     if (isAtTop) {
-//       event.preventDefault(); // 기본 스크롤 방지
-//       scrollToPreviousSection(); // 이전 섹션으로 이동
-//     }
-//   } else {
-//     // 풀페이지 스크롤 처리
-//     const newSection = currentSection + direction;
-
-//     // 새 섹션 인덱스 계산
-//     if (newSection >= 0 && newSection < sections.length) {
-//       currentSection = newSection; // 섹션 업데이트
-//       scrollToSection(currentSection); // 섹션 이동
-//     }
-//   }
-// }, { passive: false });
-
-// // 섹션 이동 함수
-// function scrollToSection(sectionIndex) {
-//   const offset = sectionIndex * window.innerHeight;
-//   isScrolling = true; // 스크롤 잠금
-
-//   // 스크롤 애니메이션
-//   window.scrollTo({
-//     top: offset,
-//     behavior: "smooth",
-//   });
-
-//   // 대기 시간 후 스크롤 잠금 해제
-//   setTimeout(() => {
-//     isScrolling = false;
-//   }, scrollDelay);
-// }
-
-// // 다음 섹션으로 이동
-// function scrollToNextSection() {
-//   const newSection = currentSection + 1;
-
-//   // 섹션 인덱스가 범위를 벗어나지 않도록 제한
-//   if (newSection >= 0 && newSection < sections.length) {
-//     currentSection = newSection;
-//     scrollToSection(currentSection);
-//   }
-// }
-
-// // 이전 섹션으로 이동
-// function scrollToPreviousSection() {
-//   const newSection = currentSection - 1;
-
-//   // 섹션 인덱스가 범위를 벗어나지 않도록 제한
-//   if (newSection >= 0 && newSection < sections.length) {
-//     currentSection = newSection;
-//     scrollToSection(currentSection);
-//   }
-// }
-
-// // 페이지 로드 시 강제로 맨 위로 이동
-// window.onbeforeunload = () => {
-//   window.scrollTo(0, 0);
-// };
 //타임라인 바 계산
 function timelineBar(){
-
   timelineSpan.style.height = 134 * timelineEvent.length + (85 * 2)  + 'px';
-
 }
 timelineBar();
 
-/* 메인 페이지 타이핑 효과 */
+// 텍스트 타이핑 함수
 function typeText(element, text, speed, callback) {
   let index = 0;
   const interval = setInterval(() => {
@@ -116,7 +52,7 @@ function typeText(element, text, speed, callback) {
   }, speed);
 }
 
-
+// 타이핑한 텍스트 지우는 함수
 function eraseText(element, text, speed, callback) {
   let index = text.length;
   const interval = setInterval(() => {
@@ -129,6 +65,7 @@ function eraseText(element, text, speed, callback) {
   }, speed);
 }
 
+// 메인 화면에 타이핑 효과를 실행시키는 함수
 function startAnimation() {
   const textElement = document.querySelector('.text');
 
@@ -151,8 +88,11 @@ function startAnimation() {
 
 setTimeout(()=>{
   startAnimation();
-
 }, 3000)
+
+// 스킬 태그 패럴렉스 효과
+const parallaxContainer = document.getElementById("parallax-container");
+  new Parallax(parallaxContainer);
 
 // 성장 멘트 슬라이드
 $('.growUp').slick({
@@ -175,10 +115,6 @@ $('.miniCard').slick({
   nextArrow: $('.minimalList .controls .next'),
 });
 
-// 스킬 태그 패럴렉스 효과
-const parallaxContainer = document.getElementById("parallax-container");
-  new Parallax(parallaxContainer);
-
 //프로젝트 목록 AOS 효과
 AOS.init({
   // 선택 사항: 초기화 시 적용할 설정 옵션
@@ -187,3 +123,8 @@ AOS.init({
   once: true,  // 스크롤 시 한 번만 애니메이션 실행
 });
 
+  // 스크롤 배경 라이브러리
+const rellax = new Rellax('.rellax', {
+    round: true, // 위치값 반올림
+    center:true,
+});
