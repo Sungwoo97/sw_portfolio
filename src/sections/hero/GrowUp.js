@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 
-const GrowUpHero = () => {
+const GrowUp = () => {
   var settings = {
     infinite: true,
     speed: 300,
@@ -30,4 +30,4 @@ const GrowUpHero = () => {
     </Slider>
   );
 };
-export default GrowUpHero;
+export default GrowUp;

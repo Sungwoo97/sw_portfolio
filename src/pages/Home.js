@@ -1,13 +1,16 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Hero from "../sections/hero/Hero";
+import HeroView from "../Views/HeroView";
+
+import AboutView from "../Views/AboutView";
 
 const Home = () => {
   return (
     <>
       <Header />
-      <Hero />
+      <HeroView />
+      <AboutView />
       <Footer />
     </>
   );

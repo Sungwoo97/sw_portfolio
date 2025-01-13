@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import VANTA from "vanta/dist/vanta.net.min";
-import TypingHero from "./TypingHero";
-import GrowUpHero from "./GrowUpHero";
+import Typing from "../sections/hero/Typing";
+import GrowUp from "../sections/hero/GrowUp";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -69,10 +69,10 @@ const Hero = () => {
             </h3>
             <h2>Portfolio</h2>
           </div>
-          <TypingHero />
+          <Typing />
         </div>
         <div class="subContent">
-          <GrowUpHero />
+          <GrowUp />
           <svg
             width="500"
             height="30"

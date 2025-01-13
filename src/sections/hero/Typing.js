@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 
-const TypingHero = () => {
+const Typing = () => {
   return (
     <div class="text-container">
       <TypeAnimation
@@ -30,4 +30,4 @@ const TypingHero = () => {
   );
 };
 
-export default TypingHero;
+export default Typing;
