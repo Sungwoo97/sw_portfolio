@@ -1,4 +1,5 @@
 import React from "react";
+import DropdownMenu from "./DropdownMenu";
 
 const Header = () => {
   return (
@@ -31,7 +32,8 @@ const Header = () => {
               </ul>
             </li>
             <li>
-              <div className="dropdown-center">
+              <DropdownMenu />
+              {/* <div className="dropdown-center">
                 <div
                   className="hamburger "
                   data-bs-toggle="dropdown"
@@ -57,7 +59,7 @@ const Header = () => {
                     </a>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </li>
           </ul>
         </div>
