@@ -1,55 +1,54 @@
-
 /* Main */
-.main{
+.main {
   display: flex;
   flex-direction: column;
-  gap: 20%;
+  gap: 15%;
   height: 100vh;
   position: relative;
 }
 
-.main h2{
+.main h2 {
   font-size: 36px;
   font-weight: 700;
   line-height: 54px;
   text-transform: uppercase;
 }
-.main h3{
+.main h3 {
   font-size: 24px;
   line-height: 36px;
 }
-.main h3 em{
+.main h3 em {
   text-transform: uppercase;
   color: var(--primary);
 }
-.main p{
+.main p {
   font-size: 20px;
   line-height: 30px;
 }
-line{
+line {
   stroke: #fff;
   stroke-width: 2;
 }
 .main .content {
   gap: 15px;
   height: 300px;
-  margin: 5% 0 0 0;
+  margin: 15% 0 0 0;
   display: flex;
   position: relative;
 }
-.main .subContent{
+.main .subContent {
   gap: 15px;
   display: flex;
   justify-content: end;
   position: relative;
 }
-.main .slick-list{
+.main .slick-list {
   width: 1200px;
   text-align: right;
 }
-.main .typeText{
+.main .typeText {
   font-size: 100px;
-  opacity: .2;
+  opacity: 0.2;
 }
 .typeText::after {
   content: "|";
@@ -58,7 +57,7 @@ line{
 }
 .text-container {
   position: absolute;
-  top: 100%;
+  top: 20%;
   left: 30%;
   display: flex;
   align-items: center;
@@ -67,16 +66,16 @@ line{
 }
 .main .text {
   font-size: 100px;
-  opacity: .2;
+  opacity: 0.2;
 }
-.scrollTo{
-  position:absolute;
+.scrollTo {
+  position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
-  height:100px;
+  height: 100px;
 }
-.scrollTo p{
+.scrollTo p {
   font-size: 10px;
   display: block;
   position: relative;
@@ -107,8 +106,8 @@ line{
   height: 24px;
   margin-left: -12px;
   border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff; 
-  transform: rotate(-45deg); 
+  border-bottom: 1px solid #fff;
+  transform: rotate(-45deg);
   animation: scrollto 2s infinite;
   opacity: 0;
   box-sizing: border-box;
@@ -117,39 +116,41 @@ line{
   animation-delay: 0s;
 }
 .scroll_motion span:nth-of-type(2) {
-  top: 16px;animation-delay: .15s;
+  top: 16px;
+  animation-delay: 0.15s;
 }
 .scroll_motion span:nth-of-type(3) {
-  top: 32px; animation-delay: .3s;
+  top: 32px;
+  animation-delay: 0.3s;
 }
-@keyframes showSW{
-  from{
+@keyframes showSW {
+  from {
     opacity: 0;
   }
-  to{
-    opacity: .1;
+  to {
+    opacity: 0.1;
   }
 }
-@keyframes showtext{
-  from{
+@keyframes showtext {
+  from {
     opacity: 0;
   }
-  to{
-    opacity: .1;
+  to {
+    opacity: 0.1;
   }
 }
 @keyframes blink {
   0% {
-    opacity:1;
+    opacity: 1;
   }
   49% {
-    opacity:1;
+    opacity: 1;
   }
   50% {
-    opacity:0;
+    opacity: 0;
   }
   100% {
-    opacity:0;
+    opacity: 0;
   }
 }
 @keyframes back_motion {
@@ -178,64 +179,64 @@ line{
 }
 
 /* About */
-.about{
+.about {
   margin-top: 81px;
   padding: 30px;
   position: relative;
   margin-bottom: 100px;
 }
-.about .content{
+.about .content {
   padding-top: 81px;
   margin: 0 auto;
   flex-wrap: nowrap;
   gap: 60px;
 }
-.about .profile{
+.about .profile {
   height: 300px;
 }
-.about .profile  img{
+.about .profile img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.about .content > .desc{
+.about .content > .desc {
   width: 50%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.about h3{
+.about h3 {
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 47px;
 }
-.about h4{
+.about h4 {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 36px;
   letter-spacing: 2.2%;
 }
-.about p{
+.about p {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 2%;
-  opacity: .8;
+  opacity: 0.8;
 }
-.about em{
+.about em {
   color: var(--primary);
   font-weight: 700;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
-.about em:hover{
+.about em:hover {
   color: #6e6e6e;
 }
-.about p strong{
+.about p strong {
   color: var(--primary);
   font-weight: 700;
   opacity: 1;
 }
-.about .blog{
+.about .blog {
   display: flex;
   gap: 20px;
   margin-top: 30px;
@@ -254,7 +255,11 @@ line{
   perspective: 1000px; /* 패럴랙스 효과 */
 }
 
-.skill .tools, .skill .front, .skill .front2, .skill .back, .skill .devops {
+.skill .tools,
+.skill .front,
+.skill .front2,
+.skill .back,
+.skill .devops {
   position: relative;
   width: 100%;
   text-align: center;
@@ -272,7 +277,7 @@ line{
     align-items: center; /* 이미지 세로 정렬 */
   }
   img {
-    opacity: .2;
+    opacity: 0.2;
     max-width: 30px;
     height: auto; /* 비율 유지 */
     margin: 10px;
@@ -294,9 +299,9 @@ line{
   margin-top: 370px;
 }
 /* Experience */
-.experience{
+.experience {
 }
- .experience .content{
+.experience .content {
   margin-bottom: 100px;
   position: relative;
   width: 100%;
@@ -317,14 +322,14 @@ line{
 .timeline {
   border-top: 2px solid var(--textGray);
   border-bottom: 2px solid var(--textGray);
-  max-height: 70%; 
-  overflow-y: auto; 
-  padding: 85px 1rem ;
-  width: 100%; 
+  max-height: 70%;
+  overflow-y: auto;
+  padding: 85px 1rem;
+  width: 100%;
   height: 600px;
   position: relative;
 }
- .timeline span {
+.timeline span {
   position: absolute;
   top: 0;
   left: 30%;
@@ -342,12 +347,12 @@ line{
 .event::before {
   content: "";
   position: absolute;
-  top: 10px; 
+  top: 10px;
   left: calc(30% - 10px);
   width: 26px;
   height: 26px;
   border: 13px solid var(--primary);
-  transform: rotate(-45deg) translateX(calc(-50%)); 
+  transform: rotate(-45deg) translateX(calc(-50%));
 }
 .event .date {
   font-size: 18px;
@@ -358,12 +363,12 @@ line{
 .event .details {
   font-size: 16px;
   line-height: 1.5;
-} 
+}
 .experience {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; 
+  overflow: hidden;
 }
 .timeline::-webkit-scrollbar {
   width: 10px;
@@ -372,40 +377,39 @@ line{
   background-color: transparent;
 }
 /* bg */
-section.bg{
+section.bg {
   overflow-x: hidden;
-} 
- .middle_bg {
-      position: relative;
-      height: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      h1{
-        z-index: 2;
-      }
-      img {
-        max-width: none;
-      }
-    }
+}
+.middle_bg {
+  position: relative;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  h1 {
+    z-index: 2;
+  }
+  img {
+    max-width: none;
+  }
+}
 
-    .middle_bg .rellax {
-      position: absolute;
-      width: 100%;
-      height: auto;
-      z-index: 1;
-      
-    }
+.middle_bg .rellax {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
 /* ProjectList */
-.projectList{
+.projectList {
   margin-top: 81px;
   margin-bottom: 100px;
 }
-.projectList .content{
+.projectList .content {
   position: relative;
 }
-.projectList h4{
+.projectList h4 {
   height: 220px;
   font-size: 24px;
   line-height: 31px;
@@ -413,47 +417,46 @@ section.bg{
   text-align: center;
   color: var(--textGray);
 }
-.listWrapper{
+.listWrapper {
   display: flex;
   flex-direction: column;
   gap: 60px;
 }
-.listSlides{
+.listSlides {
   background: #1e1e1e;
   height: 400px;
   display: flex;
 }
-.listSlides > div{
+.listSlides > div {
   padding: 0;
 }
-.listSlides:nth-child(even){
+.listSlides:nth-child(even) {
   flex-direction: row-reverse;
   margin-left: auto;
-  .info{
-    .gitLink{
-
+  .info {
+    .gitLink {
       position: absolute;
       bottom: 5%;
       left: 5%;
       transform: translateY(-50%);
-      a{
+      a {
         width: 20px;
         height: 20px;
       }
-      img{
+      img {
         width: 100%;
         height: 100%;
       }
     }
   }
 }
-.listSlides .thumbnail{
+.listSlides .thumbnail {
   position: relative;
   height: 100%;
   overflow: hidden;
 }
-.listSlides .thumbnail::after{
-  content: '';
+.listSlides .thumbnail::after {
+  content: "";
   display: inline-block;
   width: 100%;
   height: 100%;
@@ -466,10 +469,10 @@ section.bg{
   text-align: center;
   opacity: 0;
 }
-.listSlides .thumbnail:hover::after{
-  opacity: .5;
+.listSlides .thumbnail:hover::after {
+  opacity: 0.5;
 }
-.hover_btn{
+.hover_btn {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -478,43 +481,43 @@ section.bg{
   display: none;
   z-index: 10;
 }
-.listSlides .thumbnail:hover .hover_btn{
+.listSlides .thumbnail:hover .hover_btn {
   display: block;
   opacity: 1;
 }
-.listSlides img{
+.listSlides img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.listSlides h5{
+.listSlides h5 {
   color: var(--white);
   font-size: 24px;
   line-height: 31px;
   font-weight: 700;
 }
-.listSlides .info{
+.listSlides .info {
   padding: 30px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   position: relative;
 }
-.listSlides p{
+.listSlides p {
   color: var(--textGray);
   font-size: 16px;
   line-height: 21px;
 }
-.listSlides ul > li{
+.listSlides ul > li {
   color: var(--textGray);
   font-size: 16px;
   line-height: 21px;
 }
-.listSlides ul li:before{
-  content: '-';
+.listSlides ul li:before {
+  content: "-";
   display: inline-block;
 }
-.listSlides .gitLink{
+.listSlides .gitLink {
   display: flex;
   align-items: center;
   position: absolute;
@@ -522,23 +525,23 @@ section.bg{
   right: 5%;
   transform: translateY(-50%);
   gap: 10px;
-  a{
+  a {
     display: block;
     width: 20px;
     height: 20px;
   }
-  img{
+  img {
     width: 100%;
     height: 100%;
   }
-  i{
+  i {
     font-size: 20px;
     line-height: 25px;
     color: var(--primary);
   }
 }
 /* MiniProject */
-.minimalList h4{
+.minimalList h4 {
   height: 220px;
   font-size: 24px;
   line-height: 31px;
@@ -546,65 +549,64 @@ section.bg{
   text-align: center;
   color: var(--textGray);
 }
-.minimalList .content{
+.minimalList .content {
   position: relative;
 }
-.miniCard{
-
+.miniCard {
 }
-.miniCardContent{
+.miniCardContent {
   height: 400px;
   padding: 0;
   margin: 0 60px;
   background: #1e1e1e;
 }
-.miniCard img{
+.miniCard img {
   width: 100%;
   height: 225px;
   object-fit: cover;
 }
-.miniCard h5{
+.miniCard h5 {
   font-size: 24px;
   line-height: 31px;
   color: var(--white);
-  em{
+  em {
     font-size: 16px;
     color: var(--textGray);
   }
 }
-.miniCard ul li{
+.miniCard ul li {
   font-size: 16px;
   line-height: 21px;
   color: var(--textGray);
 }
-.miniCard ul li::before{
-  content: '-';
+.miniCard ul li::before {
+  content: "-";
   display: inline-block;
 }
-.miniCard .info{
+.miniCard .info {
   padding: 10px;
 }
 
 .minimalList .controls .prev,
-.minimalList .controls .next{
+.minimalList .controls .next {
   position: absolute;
   top: 60%;
   font-size: 100px;
   cursor: pointer;
 }
-.minimalList .controls .prev{
+.minimalList .controls .prev {
   right: calc(100% + 50px);
 }
-.minimalList .controls .next{
+.minimalList .controls .next {
   left: calc(100% + 50px);
 }
 /* Contact */
-.contact .content{
+.contact .content {
   margin-top: 100px;
   display: flex;
   justify-content: center;
 }
-.contact h4{
+.contact h4 {
   height: 220px;
   font-size: 24px;
   line-height: 31px;
@@ -612,12 +614,12 @@ section.bg{
   text-align: center;
   color: var(--textGray);
 }
-.contact .myInfo{
-    background: #1e1e1e;
-    padding: 105px 30px;
-    border: 1px solid #6e6e6e;
+.contact .myInfo {
+  background: #1e1e1e;
+  padding: 105px 30px;
+  border: 1px solid #6e6e6e;
 }
-.contact .myInfo dt{
+.contact .myInfo dt {
   font-size: 24px;
   line-height: 31px;
   font-weight: 700;
@@ -627,7 +629,7 @@ section.bg{
   color: var(--textGray);
   margin-bottom: 5px;
 }
-.contact .myInfo dd{
+.contact .myInfo dd {
   font-size: 16px;
   line-height: 21px;
   display: flex;
@@ -635,15 +637,15 @@ section.bg{
   gap: 10px;
   margin-bottom: 30px;
 }
-.contact .myInfo dd:last-child{
+.contact .myInfo dd:last-child {
   margin-bottom: 0;
 }
-.contact form{
+.contact form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.contact input{
+.contact input {
   width: 100%;
   height: 80px;
   border: 1px solid #6e6e6e;
@@ -654,11 +656,11 @@ section.bg{
   font-weight: 700;
   padding: 20px 30px;
 }
-.contact input:focus{
+.contact input:focus {
   outline: 2px solid var(--secondary);
   outline-offset: 1px;
 }
-.contact textarea{
+.contact textarea {
   width: 100%;
   height: 160px;
   border: 1px solid #6e6e6e;
@@ -669,7 +671,7 @@ section.bg{
   font-weight: 700;
   padding: 20px 30px;
 }
-.contact textarea:focus{
+.contact textarea:focus {
   outline: 2px solid var(--secondary);
   outline-offset: 1px;
 }
