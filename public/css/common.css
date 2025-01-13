@@ -192,12 +192,13 @@ header nav .logo {
 }
 .dropdown-menu {
   position: absolute;
-  background: var(--darkGary);
+  background: #1e1e1e;
   transform: translate(-50%, 101px) !important;
   left: 50% !important;
   border: 1px solid #6e6e6e;
   padding: 0;
   border-radius: 0;
+  z-index: 100;
 }
 .dropdown-menu::after {
   content: "";
@@ -210,9 +211,10 @@ header nav .logo {
   border-color: transparent transparent #6e6e6e transparent;
 }
 .dropdown-item {
+  background-color: #1e1e1e;
   padding: 10px 25px;
   --bs-dropdown-link-color: var(--textGray);
-  --bs-dropdown-link-active-bg: var(--darkGary);
+  --bs-dropdown-link-active-bg: #1e1e1e;
 }
 .hamburger .btn.hamburger-button {
   color: transparent;
