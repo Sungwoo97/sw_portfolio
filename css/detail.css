@@ -1,30 +1,29 @@
-main{
+main {
   margin-top: 81px;
- 
 }
-main .detail{
+main .detail {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 /* Title */
-.title h2{
+.title h2 {
   font-size: 36px;
   font-weight: 700;
   line-height: 54px;
 }
-.title span{
+.title span {
   font-size: 16px;
   color: var(--textGray);
   font-weight: normal;
 }
 /* Skill */
-.skill ul{
+.skill ul {
   display: flex;
   gap: 20px;
   justify-content: start;
 }
-.skill ul > li{
+.skill ul > li {
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
@@ -32,80 +31,80 @@ main .detail{
   padding: 3px 15px;
 }
 /* Feature */
-.feature h3{
+.feature h3 {
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
   margin-bottom: 5px;
 }
-.feature ul{
+.feature ul {
   font-size: 16px;
   line-height: 24px;
 }
-.feature ul li:before{
-  content: '-';
+.feature ul li:before {
+  content: "-";
   display: inline-block;
   padding-right: 5px;
 }
 /* Overview */
-.overview h3{
+.overview h3 {
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
   margin-bottom: 5px;
 }
-.overview p{
+.overview p {
   font-size: 16px;
   font-weight: normal;
   line-height: 24px;
 }
 /* Attach */
-.attach{
+.attach {
   width: 100%;
   height: 700px;
 }
-.attach img{
+.attach img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 /* Contribution */
-.contribution h3{
+.contribution h3 {
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
   margin-bottom: 5px;
 }
-.contribution p{
+.contribution p {
   font-size: 16px;
   font-weight: normal;
   line-height: 24px;
 }
 /* Problem */
-.problem h3{
+.problem h3 {
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
   margin-bottom: 15px;
 }
-.problem ul{
+.problem ul {
   font-size: 16px;
   font-weight: normal;
   line-height: 24px;
 }
-.problem ul span:before{
-  content:'[';
+.problem ul span:before {
+  content: "[";
 }
-.problem ul span{
-  font-weight: 700; 
+.problem ul span {
+  font-weight: 700;
   margin-right: 5px;
 }
-.problem ul span::after{
-  content:']';
+.problem ul span::after {
+  content: "]";
 }
-.problem .accordion{
-  --bs-accordion-color :var(--textGray);
-  --bs-accordion-bg : #121212;
+.problem .accordion {
+  --bs-accordion-color: var(--textGray);
+  --bs-accordion-bg: #121212;
   --bs-accordion-btn-color: var(--textGray);
   --bs-accordion-active-color: var(--textGray);
   --bs-accordion-active-bg: #1e1e1e;
