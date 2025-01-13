@@ -52,7 +52,9 @@ line {
 }
 .typeText::after {
   content: "|";
+  display: block;
   animation: blink 1s step-end infinite;
+  margin-bottom: 15px;
   color: #fff;
 }
 .text-container {

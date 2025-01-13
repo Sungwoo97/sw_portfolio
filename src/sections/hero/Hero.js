@@ -1,5 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import VANTA from "vanta/dist/vanta.net.min";
+import TypingHero from "./TypingHero";
+import GrowUpHero from "./GrowUpHero";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Hero = () => {
   const [vantaEffect, setVantaEffect] = useState(null);
@@ -65,14 +69,11 @@ const Hero = () => {
             </h3>
             <h2>Portfolio</h2>
           </div>
-          <div class="text-container">
-            <p class="text"></p>
-            <p class="typeText"></p>
-          </div>
+          <TypingHero />
         </div>
 
         <div class="subContent">
-          <div class="growUp">
+          {/* <div class="growUp">
             <p>
               책임감을 바탕으로 맡은 일을 끝까지 해내며, 문제를 해결하고
               성장하는 부드러운 개발자입니다.
@@ -85,7 +86,8 @@ const Hero = () => {
               끊임없이 발전하는 자세로, 매일 조금씩 더 나아가며 부드러운
               개발자가 되어갑니다
             </p>
-          </div>
+          </div> */}
+          <GrowUpHero />
           <svg
             width="500"
             height="30"
