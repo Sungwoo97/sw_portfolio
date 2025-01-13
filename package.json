@@ -3,10 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "cra-template": "1.2.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.7.1",
+    "parallax-js": "^3.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.30.3",
+    "rellax": "^1.12.1",
+    "slick-carousel": "^1.8.1",
+    "three": "^0.172.0",
+    "vanta": "^0.5.24",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
