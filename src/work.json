@@ -1,0 +1,30 @@
+[
+  {
+    "date": "2024.08",
+    "details": {
+      "title": "1차 개인 프로젝트",
+      "subtitle": "Web Project - Static Web App"
+    }
+  },
+  {
+    "date": "2024.10",
+    "details": {
+      "title": "2차 팀 프로젝트",
+      "subtitle": "시가총액 TOP 100 기업내 선정 Renewal Project"
+    }
+  },
+  {
+    "date": "2024.12",
+    "details": {
+      "title": "3차 팀 프로젝트",
+      "subtitle": "LMS (학습지원시스템) 프로젝트"
+    }
+  },
+  {
+    "date": "2025.01",
+    "details": {
+      "title": "그린컴퓨터아트학원",
+      "subtitle": "웹디자인 & 프론트엔드 SW 개발자 양성과정 수료"
+    }
+  }
+]
