@@ -13,19 +13,15 @@ const Skill = () => {
   };
 
   const calculateTransform = (depth) => ({
-    x: mousePosition.x * depth,
-    y: mousePosition.y * depth,
+    x: mousePosition.x * depth * 0.5,
+    y: mousePosition.y * depth * 0.5,
   });
   return (
-    <div
-      class="skill container"
-      id="parallax-container"
-      onMouseMove={handleMouseMove}
-    >
+    <div class="skill container" onMouseMove={handleMouseMove}>
       <motion.div
         class="tools"
-        animate={calculateTransform(0.4)}
-        transition={{ type: "spring", stiffness: 50, damping: 20 }}
+        animate={calculateTransform(0.1)}
+        transition={{ type: "spring", stiffness: 30, damping: 25 }}
       >
         <ul>
           <li>
@@ -42,7 +38,11 @@ const Skill = () => {
           </li>
         </ul>
       </motion.div>
-      <motion.div class="front" data-depth="0.8">
+      <motion.div
+        class="front"
+        animate={calculateTransform(0.1)}
+        transition={{ type: "spring", stiffness: 30, damping: 25 }}
+      >
         <ul>
           <li>
             <img src="./img/html5.svg" alt="HTML" />
@@ -58,7 +58,11 @@ const Skill = () => {
           </li>
         </ul>
       </motion.div>
-      <div class="front2" data-depth="0.6">
+      <motion.div
+        class="front2"
+        animate={calculateTransform(0.1)}
+        transition={{ type: "spring", stiffness: 30, damping: 25 }}
+      >
         <ul>
           <li>
             <img src="./img/react.svg" alt="React" />
@@ -70,8 +74,12 @@ const Skill = () => {
             <img src="./img/vue-dot-js.svg" alt="Vue.js" />
           </li>
         </ul>
-      </div>
-      <div class="back" data-depth="0.6">
+      </motion.div>
+      <motion.div
+        class="back"
+        animate={calculateTransform(0.1)}
+        transition={{ type: "spring", stiffness: 30, damping: 25 }}
+      >
         <ul>
           <li>
             <img src="./img/php.svg" alt="PHP" />
@@ -80,8 +88,12 @@ const Skill = () => {
             <img src="./img/mysql.svg" alt="MySQL" />
           </li>
         </ul>
-      </div>
-      <div class="devops" data-depth="0.4">
+      </motion.div>
+      <motion.div
+        class="devops"
+        animate={calculateTransform(0.1)}
+        transition={{ type: "spring", stiffness: 30, damping: 25 }}
+      >
         <ul>
           <li>
             <img src="./img/amazonaws.svg" alt="AWS" />
@@ -93,7 +105,7 @@ const Skill = () => {
             <img src="./img/supabase.svg" alt="Supabase" />
           </li>
         </ul>
-      </div>
+      </motion.div>
     </div>
   );
 };
