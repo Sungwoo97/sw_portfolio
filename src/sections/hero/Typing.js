@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { TypeAnimation } from "react-type-animation";
 
 const Typing = () => {
@@ -14,9 +14,7 @@ const Typing = () => {
           4000, // Waits 2s
           "", // Types 'One'
           2000, // Waits 1s
-          () => {
-            console.log("Sequence completed");
-          },
+          () => {},
         ]}
         speed={5}
         deletionSpeed={5}
