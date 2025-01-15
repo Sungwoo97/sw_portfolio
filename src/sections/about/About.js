@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div class="content container row">
       <div class="profile col-md-4">
-        <img src="./img/dev_env.png" alt="개발환경 사진" />
+        <img src="./img/profile_image.png" alt="개발환경 사진" />
       </div>
       <div class="desc col-md-8">
         <h3>부드러운 웹 개발을 꿈꾸며</h3>
