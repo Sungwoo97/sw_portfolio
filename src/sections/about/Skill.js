@@ -17,7 +17,7 @@ const Skill = () => {
     y: mousePosition.y * depth * 0.5,
   });
   return (
-    <div class="skill container" onMouseMove={handleMouseMove}>
+    <div class="skill " onMouseMove={handleMouseMove}>
       <motion.div
         class="tools"
         animate={calculateTransform(0.1)}
