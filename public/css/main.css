@@ -380,7 +380,7 @@ line {
 }
 /* bg */
 section.bg {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .middle_bg {
   position: relative;
@@ -390,10 +390,13 @@ section.bg {
   align-items: center;
   overflow: hidden;
   h1 {
+    background: url(./img/dev_env.png) no-repeat center center/cover;
     z-index: 2;
   }
   img {
-    max-width: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
