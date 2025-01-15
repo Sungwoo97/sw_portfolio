@@ -9,17 +9,17 @@ import MinimalView from "../Views/MinimalView";
 import BgParallax from "../components/BgParallax";
 import ContactView from "../Views/ContactView";
 
-const Home = ({ work, list, mini }) => {
+const Home = ({ data }) => {
   return (
     <>
       <Header />
       <HeroView />
       <AboutView />
-      <WorkView events={work} />
+      <WorkView events={data.work} />
       <BgParallax />
-      <ProjectView list={list} />
-      <MinimalView mini={mini} />
-      <ContactView />
+      <ProjectView list={data.projects} />
+      <MinimalView mini={data.mini} />
+      <ContactView profile={data.profile} />
       <Footer />
     </>
   );
