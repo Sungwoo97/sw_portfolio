@@ -555,12 +555,15 @@ section.bg {
 .minimalList .content {
   position: relative;
 }
-.miniCard {
+.miniCard .slick-slide {
+  padding: 0 30px;
 }
+
 .miniCardContent {
+  width: 100%;
   height: 400px;
   padding: 0;
-  margin: 0 60px;
+  /* margin-right: 32px; */
   background: #1e1e1e;
 }
 .miniCard img {

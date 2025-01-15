@@ -5,9 +5,10 @@ import HeroView from "../Views/HeroView";
 import AboutView from "../Views/AboutView";
 import WorkView from "../Views/WorkView";
 import ProjectView from "../Views/ProjectView";
+import MinimalView from "../Views/MinimalView";
 import BgParallax from "../components/BgParallax";
 
-const Home = ({ work, list }) => {
+const Home = ({ work, list, mini }) => {
   return (
     <>
       <Header />
@@ -16,6 +17,7 @@ const Home = ({ work, list }) => {
       <WorkView events={work} />
       <BgParallax />
       <ProjectView list={list} />
+      <MinimalView mini={mini} />
       <Footer />
     </>
   );
