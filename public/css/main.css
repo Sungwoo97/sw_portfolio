@@ -663,7 +663,7 @@ section.bg {
   padding: 20px 30px;
 }
 .contact input:focus {
-  outline: 2px solid var(--secondary);
+  outline: 4px solid var(--secondary);
   outline-offset: 1px;
 }
 .contact textarea {
@@ -678,6 +678,6 @@ section.bg {
   padding: 20px 30px;
 }
 .contact textarea:focus {
-  outline: 2px solid var(--secondary);
+  outline: 4px solid var(--secondary);
   outline-offset: 1px;
 }

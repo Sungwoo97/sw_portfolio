@@ -7,6 +7,7 @@ import WorkView from "../Views/WorkView";
 import ProjectView from "../Views/ProjectView";
 import MinimalView from "../Views/MinimalView";
 import BgParallax from "../components/BgParallax";
+import ContactView from "../Views/ContactView";
 
 const Home = ({ work, list, mini }) => {
   return (
@@ -18,6 +19,7 @@ const Home = ({ work, list, mini }) => {
       <BgParallax />
       <ProjectView list={list} />
       <MinimalView mini={mini} />
+      <ContactView />
       <Footer />
     </>
   );
