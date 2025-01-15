@@ -1,4 +1,11 @@
 {
+  "profile": {
+    "name": "남성우",
+    "phone": "010-2664-8175",
+    "email": "Gwaja97@gmail.com",
+    "address": "서울시 서대문구 북가좌동",
+    "thumbnail": "./img/profile_image.png"
+  },
   "projects": [
     {
       "id": 1,
@@ -72,6 +79,72 @@
       "links": {
         "github": "http://3.39.192.39/qc/index.php",
         "live": "http://3.39.192.39/qc/index.php"
+      }
+    }
+  ],
+  "mini": [
+    {
+      "id": 1,
+      "title": "Vue.js TodoList",
+      "image": "./img/dev_env.png",
+      "description": ["Vue.js의 기초 예제", "VMC 모델의 이해"]
+    },
+    {
+      "id": 2,
+      "title": "React Board",
+      "subtitle": "운영중지",
+      "image": "./img/dev_env.png",
+      "description": [
+        "React로 CRUD기능을 사용하여 게시판을 제작",
+        "FireBase로 기능 구현"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Laravel BikeShop",
+      "image": "./img/dev_env.png",
+      "description": [
+        "Laravel로 CRUD 기능을 이용한 상품 게시페이지 제작",
+        "VMC 모델의 이해"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Laravel BikeShop",
+      "image": "./img/dev_env.png",
+      "description": [
+        "Laravel로 CRUD 기능을 이용한 상품 게시페이지 제작",
+        "VMC 모델의 이해"
+      ]
+    }
+  ],
+  "work": [
+    {
+      "date": "2024.08",
+      "details": {
+        "title": "1차 개인 프로젝트",
+        "subtitle": "Web Project - Static Web App"
+      }
+    },
+    {
+      "date": "2024.10",
+      "details": {
+        "title": "2차 팀 프로젝트",
+        "subtitle": "시가총액 TOP 100 기업내 선정 Renewal Project"
+      }
+    },
+    {
+      "date": "2024.12",
+      "details": {
+        "title": "3차 팀 프로젝트",
+        "subtitle": "LMS (학습지원시스템) 프로젝트"
+      }
+    },
+    {
+      "date": "2025.01",
+      "details": {
+        "title": "그린컴퓨터아트학원",
+        "subtitle": "웹디자인 & 프론트엔드 SW 개발자 양성과정 수료"
       }
     }
   ]
