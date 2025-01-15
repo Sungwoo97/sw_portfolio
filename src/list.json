@@ -1,6 +1,7 @@
 {
   "projects": [
     {
+      "id": 1,
       "title": "Korail Renewal Project (개인)",
       "duration": "2024.07.04 ~ 2024.08.22",
       "details": [
@@ -21,6 +22,7 @@
       }
     },
     {
+      "id": 2,
       "title": "KIA Renewal Project (팀)",
       "duration": "2024.08.23 ~ 2024.09.26",
       "details": [
@@ -41,6 +43,7 @@
       }
     },
     {
+      "id": 3,
       "title": "LMS 웹사이트 관리자 페이지 구현 (팀)",
       "duration": "2024.10.11 ~ 2024.11.25",
       "details": [
@@ -56,6 +59,7 @@
       }
     },
     {
+      "id": 4,
       "title": "LMS 웹사이트 사용자 페이지 구현 (팀)",
       "duration": "2024.11.26 ~ 2024.12.23",
       "details": [

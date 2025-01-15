@@ -7,7 +7,7 @@ import WorkView from "../Views/WorkView";
 import ProjectView from "../Views/ProjectView";
 import BgParallax from "../components/BgParallax";
 
-const Home = ({ work }) => {
+const Home = ({ work, list }) => {
   return (
     <>
       <Header />
@@ -15,7 +15,7 @@ const Home = ({ work }) => {
       <AboutView />
       <WorkView events={work} />
       <BgParallax />
-      <ProjectView />
+      <ProjectView list={list} />
       <Footer />
     </>
   );
