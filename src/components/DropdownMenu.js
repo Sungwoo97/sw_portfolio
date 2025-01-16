@@ -1,6 +1,5 @@
 import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
-// import "bootstrap/dist/css/bootstrap.min.css";
 
 function DropdownMenu() {
   return (
@@ -11,12 +10,10 @@ function DropdownMenu() {
           className="hamburger-button"
           drop="down-centered"
         >
-          {/* <a href="/" class="hamburger-button"> */}
           <span></span>
           <span></span>
           <span></span>
           <span></span>
-          {/* </a> */}
         </Dropdown.Toggle>
         <Dropdown.Menu className="dropdown-menu" drop="down-centered">
           <Dropdown.Item className="dropdown-item">문의 게시판</Dropdown.Item>

@@ -1,7 +1,6 @@
 import React from "react";
 
 const Profile = ({ profile }) => {
-  console.log(profile.email);
   return (
     <div className="myInfo col-md-4">
       <dl>

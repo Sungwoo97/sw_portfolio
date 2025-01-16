@@ -1,5 +1,5 @@
 import React from "react";
-import { ParallaxProvider, Parallax, useParallax } from "react-scroll-parallax";
+import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 
 const BgParallax = () => {
   return (
