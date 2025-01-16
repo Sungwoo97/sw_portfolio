@@ -11,22 +11,22 @@ const Footer = () => {
           <ul class="icons">
             <li>
               <a href="">
-                <img src="./img/footer_email.svg" alt="" />
+                <img src="../img/footer_email.svg" alt="" />
               </a>
             </li>
             <li>
               <a href="">
-                <img src="./img/footer_github.svg" alt="" />
+                <img src="../img/footer_github.svg" alt="" />
               </a>
             </li>
             <li>
               <a href="">
-                <img src="./img/footer_notion.svg" alt="" />
+                <img src="../img/footer_notion.svg" alt="" />
               </a>
             </li>
             <li>
               <a href="">
-                <img src="./img/footer_instagram.svg" alt="" />
+                <img src="../img/footer_instagram.svg" alt="" />
               </a>
             </li>
           </ul>
