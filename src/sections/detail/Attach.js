@@ -1,6 +1,6 @@
 import React from "react";
 
-const Attach = () => {
+const Attach = ({ data }) => {
   return (
     <section class="attach">
       <img src="./img/dev_env.png" alt="프로젝트 첨부파일" />

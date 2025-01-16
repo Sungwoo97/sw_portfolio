@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Title from "../sections/detail/Title";
@@ -8,7 +9,11 @@ import Attach from "../sections/detail/Attach";
 import Contribution from "../sections/detail/Contribution";
 import Problem from "../sections/detail/Problem";
 
-const Detail = ({}) => {
+const Detail = ({ data }) => {
+  const { id } = useParams(); // URL의 id를 가져옴
+  const currentId = parseInt(id, 10); // id를 숫자로 변환
+  const item = data[currentId];
+
   useEffect(() => {
     const link = document.createElement("link");
     link.rel = "stylesheet";
@@ -19,17 +24,18 @@ const Detail = ({}) => {
       document.head.removeChild(link); // 페이지 변경 시 제거
     };
   }, []);
+  if (!item) return <p>Item not found</p>;
   return (
     <>
       <Header />
       <main>
         <div class="detail container">
-          <Title />
-          <Feature />
-          <Overview />
-          <Attach />
-          <Contribution />
-          <Problem />
+          <Title data={data} />
+          <Feature data={data} />
+          <Overview data={data} />
+          <Attach data={data} />
+          <Contribution data={data} />
+          <Problem data={data} />
         </div>
       </main>
       <Footer />

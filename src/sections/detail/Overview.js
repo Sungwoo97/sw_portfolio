@@ -1,6 +1,6 @@
 import React from "react";
 
-const Overview = () => {
+const Overview = ({ data }) => {
   return (
     <section class="overview">
       <h3>프로젝트 개요</h3>

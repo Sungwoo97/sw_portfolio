@@ -12,7 +12,14 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home data={data} />} />
-        <Route path="/detail" element={<Detail />} />
+        <Route
+          path="/detail"
+          element={<Detail data={data.detail_projects} />}
+        />
+        <Route
+          path="/detail/:id"
+          element={<Detail data={data.detail_projects} />}
+        />
       </Routes>
     </Router>
   );

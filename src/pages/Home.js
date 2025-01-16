@@ -11,6 +11,7 @@ import BgParallax from "../components/BgParallax";
 import ContactView from "../views/ContactView";
 
 const Home = ({ data }) => {
+  console.log(data);
   useEffect(() => {
     const link = document.createElement("link");
     link.rel = "stylesheet";
