@@ -11,17 +11,18 @@ import BgParallax from "../components/BgParallax";
 import ContactView from "../views/ContactView";
 
 const Home = ({ data }) => {
-  console.log(data);
+  const cssPath = `${process.env.PUBLIC_URL}/css/main.css`;
+
   useEffect(() => {
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = `${process.env.PUBLIC_URL}/css/main.css`;
+    link.href = cssPath;
     document.head.appendChild(link);
 
     return () => {
       document.head.removeChild(link); // 페이지 변경 시 제거
     };
-  }, []);
+  }, [cssPath]);
   return (
     <>
       <Header />
