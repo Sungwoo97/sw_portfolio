@@ -2,13 +2,13 @@ import React, { useEffect } from "react";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import HeroView from "../Views/HeroView";
-import AboutView from "../Views/AboutView";
-import WorkView from "../Views/WorkView";
-import ProjectView from "../Views/ProjectView";
-import MinimalView from "../Views/MinimalView";
+import HeroView from "../views/HeroView";
+import AboutView from "../views/AboutView";
+import WorkView from "../views/WorkView";
+import ProjectView from "../views/ProjectView";
+import MinimalView from "../views/MinimalView";
 import BgParallax from "../components/BgParallax";
-import ContactView from "../Views/ContactView";
+import ContactView from "../views/ContactView";
 
 const Home = ({ data }) => {
   useEffect(() => {
