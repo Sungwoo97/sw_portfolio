@@ -422,45 +422,13 @@ section.bg {
   text-align: center;
   color: var(--textGray);
 }
-.listWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-}
+
 .listSlides {
-  background: #1e1e1e;
   height: 400px;
   display: flex;
+  margin-bottom: 30px;
 }
-.listSlides > div {
-  padding: 0;
-}
-.listSlides:nth-child(even) {
-  flex-direction: row-reverse;
-  margin-left: auto;
-  .info {
-    .gitLink {
-      position: absolute;
-      bottom: 5%;
-      left: 5%;
-      transform: translateY(-50%);
-      a {
-        width: 20px;
-        height: 20px;
-      }
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-}
-.listSlides .thumbnail {
-  position: relative;
-  height: 100%;
-  overflow: hidden;
-}
-.listSlides .thumbnail::after {
+.listSlides .listContent::after {
   content: "";
   display: inline-block;
   width: 100%;
@@ -474,54 +442,49 @@ section.bg {
   text-align: center;
   opacity: 0;
 }
-.listSlides .thumbnail:hover::after {
+.listSlides .listContent:hover::after {
   opacity: 0.5;
 }
-.hover_btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  display: none;
-  z-index: 10;
+
+.listContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-.listSlides .thumbnail:hover .hover_btn {
-  display: block;
+
+.listSlides .listContent:hover .listinfo {
   opacity: 1;
 }
-.listSlides img {
+.listWrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.listSlides h5 {
-  color: var(--white);
+.listinfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  opacity: 0;
+}
+.listinfo h5 {
+  width: 400px;
+  text-align: center;
   font-size: 24px;
   line-height: 31px;
   font-weight: 700;
 }
-.listSlides .info {
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  position: relative;
-}
+
 .listSlides p {
   color: var(--textGray);
   font-size: 16px;
   line-height: 21px;
 }
-.listSlides ul > li {
-  color: var(--textGray);
-  font-size: 16px;
-  line-height: 21px;
-}
-.listSlides ul li:before {
-  content: "-";
-  display: inline-block;
-}
+
 .listSlides .gitLink {
   display: flex;
   align-items: center;

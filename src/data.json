@@ -51,7 +51,7 @@
     },
     {
       "id": 3,
-      "title": "LMS 웹사이트 관리자 페이지 구현 (팀)",
+      "title": "LMS 웹사이트 관리자 페이지 (팀)",
       "duration": "2024.10.11 ~ 2024.11.25",
       "details": [
         "HTML, CSS, JavaScript, JQuery를 이용한 하드코딩",
@@ -67,7 +67,7 @@
     },
     {
       "id": 4,
-      "title": "LMS 웹사이트 사용자 페이지 구현 (팀)",
+      "title": "LMS 웹사이트 사용자 페이지 (팀)",
       "duration": "2024.11.26 ~ 2024.12.23",
       "details": [
         "HTML, CSS, JavaScript, JQuery를 이용한 하드코딩",
