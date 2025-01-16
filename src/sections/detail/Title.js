@@ -1,16 +1,16 @@
 import React from "react";
 
-const Title = () => {
+const Title = ({ data }) => {
   return (
     <section class="title">
       <h2>
-        Let's Korail Renewal Project <span>1인</span>
+        {data.title} <span>{data.member_count}인</span>
       </h2>
       <div class="skill">
         <ul>
-          <li>html</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
+          {data.skills.map((skill, index) => (
+            <li key={index}>{skill}</li>
+          ))}
         </ul>
       </div>
     </section>

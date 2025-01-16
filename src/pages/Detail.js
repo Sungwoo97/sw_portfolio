@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Title from "../sections/detail/Title";
@@ -11,31 +11,36 @@ import Problem from "../sections/detail/Problem";
 
 const Detail = ({ data }) => {
   const { id } = useParams(); // URL의 id를 가져옴
-  const currentId = parseInt(id, 10); // id를 숫자로 변환
+  const currentId = parseInt(id, 10) - 1; // id를 숫자로 변환
   const item = data[currentId];
 
+  const cssPath = `${process.env.PUBLIC_URL}/css/detail.css`;
+
+  //페이지 별로 다른 css 파일을 적용하기 위해 useEffect 사용
   useEffect(() => {
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = `${process.env.PUBLIC_URL}/css/detail.css`;
+    link.href = cssPath;
     document.head.appendChild(link);
 
     return () => {
       document.head.removeChild(link); // 페이지 변경 시 제거
     };
-  }, []);
+  }, [cssPath]);
+
   if (!item) return <p>Item not found</p>;
+
   return (
     <>
       <Header />
       <main>
         <div class="detail container">
-          <Title data={data} />
-          <Feature data={data} />
-          <Overview data={data} />
-          <Attach data={data} />
-          <Contribution data={data} />
-          <Problem data={data} />
+          <Title data={item} />
+          <Feature data={item} />
+          <Overview data={item} />
+          <Attach data={item} />
+          <Contribution data={item} />
+          <Problem data={item} />
         </div>
       </main>
       <Footer />

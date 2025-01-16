@@ -3,7 +3,7 @@ import React from "react";
 const Attach = ({ data }) => {
   return (
     <section class="attach">
-      <img src="./img/dev_env.png" alt="프로젝트 첨부파일" />
+      <img src={data.attach.image} alt={data.attach.description} />
     </section>
   );
 };
