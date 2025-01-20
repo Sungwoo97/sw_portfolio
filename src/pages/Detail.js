@@ -34,9 +34,9 @@ const Detail = ({ data }) => {
     <>
       <Header />
       <main>
-        <div class="detail container">
-          <div class="row">
-            <div class="col-md-8">
+        <div className="detail container">
+          <div className="row">
+            <div className="col-md-8">
               <Title data={item} />
               <Feature data={item} />
               <Overview data={item} />
@@ -44,7 +44,7 @@ const Detail = ({ data }) => {
               <Contribution data={item} />
               <Problem data={item} />
             </div>
-            <div class="col-md-4">
+            <div className="col-md-4">
               <Attach data={item} />
             </div>
           </div>

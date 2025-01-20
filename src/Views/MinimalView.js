@@ -54,7 +54,7 @@ const MinimalView = ({ mini }) => {
         <h4>저는 이렇게 사이드 프로젝트를 진행했어요</h4>
         <Slider className="miniCard" {...settings}>
           {mini.map((mini, index) => (
-            <Mini mini={mini} index={index} />
+            <Mini mini={mini} key={mini.id} index={index} />
           ))}
         </Slider>
         <div className="controls"></div>

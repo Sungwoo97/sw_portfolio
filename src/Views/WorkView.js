@@ -31,10 +31,10 @@ const WorkView = ({ events }) => {
   }, [events]); // events가 변경될 때마다 다시 계산
 
   return (
-    <section class="experience" id="exp" ref={timelineContainerRef}>
-      <div class="content">
+    <section className="experience" id="exp" ref={timelineContainerRef}>
+      <div className="content">
         <h4>저는 이렇게 달려왔습니다</h4>
-        <div class="timeline ">
+        <div className="timeline ">
           <span
             ref={timelineSpanRef}
             style={{

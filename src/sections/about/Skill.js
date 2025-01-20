@@ -17,9 +17,9 @@ const Skill = () => {
     y: mousePosition.y * depth * 0.5,
   });
   return (
-    <div class="skill " onMouseMove={handleMouseMove}>
+    <div className="skill " onMouseMove={handleMouseMove}>
       <motion.div
-        class="tools"
+        className="tools"
         animate={calculateTransform(0.1)}
         transition={{ type: "spring", stiffness: 30, damping: 25 }}
       >
@@ -39,7 +39,7 @@ const Skill = () => {
         </ul>
       </motion.div>
       <motion.div
-        class="front"
+        className="front"
         animate={calculateTransform(0.1)}
         transition={{ type: "spring", stiffness: 30, damping: 25 }}
       >
@@ -59,7 +59,7 @@ const Skill = () => {
         </ul>
       </motion.div>
       <motion.div
-        class="front2"
+        className="front2"
         animate={calculateTransform(0.1)}
         transition={{ type: "spring", stiffness: 30, damping: 25 }}
       >
@@ -76,7 +76,7 @@ const Skill = () => {
         </ul>
       </motion.div>
       <motion.div
-        class="back"
+        className="back"
         animate={calculateTransform(0.1)}
         transition={{ type: "spring", stiffness: 30, damping: 25 }}
       >
@@ -90,7 +90,7 @@ const Skill = () => {
         </ul>
       </motion.div>
       <motion.div
-        class="devops"
+        className="devops"
         animate={calculateTransform(0.1)}
         transition={{ type: "spring", stiffness: 30, damping: 25 }}
       >

@@ -3,7 +3,7 @@ import Accordion from "react-bootstrap/Accordion";
 
 const Problem = ({ data }) => {
   return (
-    <section class="problem">
+    <section className="problem">
       <h3>프로젝트 문제 해결</h3>
       <Accordion flush>
         {data.problems.map((problem, index) => (

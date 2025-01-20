@@ -14,7 +14,7 @@ const GrowUp = () => {
 
   // 성장 멘트 슬라이드
   return (
-    <Slider class="growUp" {...settings}>
+    <Slider className="growUp" {...settings}>
       <p>
         책임감을 바탕으로 맡은 일을 끝까지 해내며, 문제를 해결하고 성장하는
         부드러운 개발자입니다.

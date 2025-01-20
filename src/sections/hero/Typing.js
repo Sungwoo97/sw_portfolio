@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const Typing = () => {
   return (
-    <div class="text-container">
+    <div className="text-container">
       <TypeAnimation
         sequence={[
           "FRONT-END", // Types 'One'

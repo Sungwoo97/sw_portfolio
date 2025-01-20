@@ -3,12 +3,12 @@ import React from "react";
 const Footer = () => {
   return (
     <footer>
-      <div class="container">
-        <div class="footer_head">
-          <h2 class="">
-            <a href="index.html" class="logo"></a>
+      <div className="container">
+        <div className="footer_head">
+          <h2 className="">
+            <a href="index.html" className="logo"></a>
           </h2>
-          <ul class="icons">
+          <ul className="icons">
             <li>
               <a href="">
                 <img src="../img/footer_email.svg" alt="" />
@@ -31,7 +31,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <ul class="bottom_nav">
+        <ul className="bottom_nav">
           <li>
             <a href="">HOME</a>
           </li>

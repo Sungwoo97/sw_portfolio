@@ -2,7 +2,7 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <div class="blog">
+    <div className="blog">
       <a
         href="https://jagged-periwinkle-b90.notion.site/174906281d3380d3a4a3f0be8e09c88b?pvs=4"
         target="_blank"

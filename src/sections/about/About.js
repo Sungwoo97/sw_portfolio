@@ -3,11 +3,11 @@ import Blog from "./Blog";
 
 const About = () => {
   return (
-    <div class="content container row">
-      <div class="profile col-md-4">
+    <div className="content container row">
+      <div className="profile col-md-4">
         <img src="./img/profile_image.png" alt="개발환경 사진" />
       </div>
-      <div class="desc col-md-8">
+      <div className="desc col-md-8">
         <h3>부드러운 웹 개발을 꿈꾸며</h3>
         <h4>
           안녕하세요! 저는 신입 웹 개발자 <em>남성우</em>입니다.

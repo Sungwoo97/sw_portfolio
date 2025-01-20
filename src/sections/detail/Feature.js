@@ -2,7 +2,7 @@ import React from "react";
 
 const Feature = ({ data }) => {
   return (
-    <section class="feature">
+    <section className="feature">
       <h3>주요 기능</h3>
       <ul>
         {data.features.map((list, index) => (

@@ -5,7 +5,7 @@ import Skill from "../sections/about/Skill";
 const AboutView = () => {
   return (
     <>
-      <section class="about" id="about">
+      <section className="about" id="about">
         <Skill />
         <About />
       </section>

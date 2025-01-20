@@ -51,8 +51,8 @@ const Hero = () => {
               y1="2.5"
               x2="300"
               y2="2.5"
-              stroke-dasharray="300"
-              stroke-dashoffset="300"
+              strokeDasharray="300"
+              strokeDashoffset="300"
             >
               <animate
                 attributeName="stroke-dashoffset"
@@ -63,7 +63,7 @@ const Hero = () => {
               />
             </line>
           </svg>
-          <div class="info">
+          <div className="info">
             <h3>
               <em>namsungwoo</em>'s
             </h3>
@@ -71,7 +71,7 @@ const Hero = () => {
           </div>
           <Typing />
         </div>
-        <div class="subContent">
+        <div className="subContent">
           <GrowUp />
           <svg
             width="500"
@@ -84,8 +84,8 @@ const Hero = () => {
               y1="25"
               x2="0"
               y2="25"
-              stroke-dasharray="500"
-              stroke-dashoffset="500"
+              strokeDasharray="500"
+              strokeDashoffset="500"
             >
               <animate
                 attributeName="stroke-dashoffset"
@@ -98,12 +98,12 @@ const Hero = () => {
             </line>
           </svg>
         </div>
-        <div class="scrollTo">
+        <div className="scrollTo">
           <p>Scroll To</p>
-          <div class="back_motion">
+          <div className="back_motion">
             <span></span>
           </div>
-          <div class="scroll_motion">
+          <div className="scroll_motion">
             <span></span>
             <span></span>
             <span></span>

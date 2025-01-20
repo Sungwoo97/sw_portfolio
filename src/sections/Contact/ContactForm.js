@@ -8,21 +8,21 @@ const AboutView = () => {
   };
   return (
     <form action="/" className="col-md-6" onSubmit={handleSubmit}>
-      <label HTMLFor="name" className="hidden"></label>
+      <label htmlFor="name" className="hidden"></label>
       <input
         type="text"
         id="name"
         placeholder="Name"
         aria-label="Enter your name"
       />
-      <label HTMLFor="email" className="hidden"></label>
+      <label htmlFor="email" className="hidden"></label>
       <input
         type="email"
         id="email"
         placeholder="Email"
         aria-label="Enter your email"
       />
-      <label HTMLFor="Message" className="hidden"></label>
+      <label htmlFor="Message" className="hidden"></label>
       <textarea
         name="Message"
         id="Message"

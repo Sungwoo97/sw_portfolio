@@ -2,7 +2,7 @@ import React from "react";
 
 const Attach = ({ data }) => {
   return (
-    <section class="attach">
+    <section className="attach">
       {data.attach.map((image, index) => (
         <img key={index} src={image.image} alt={image.description} />
       ))}
