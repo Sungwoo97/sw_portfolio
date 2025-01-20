@@ -2,7 +2,7 @@ import React from "react";
 
 const Title = ({ data }) => {
   return (
-    <section clclassNameass="title">
+    <section className="title">
       <h2>
         {data.title} <span>{data.member_count}인</span>
       </h2>
