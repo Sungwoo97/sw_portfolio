@@ -1,6 +1,6 @@
 import React from "react";
-import About from "../sections/about/About";
-import Skill from "../sections/about/Skill";
+import About from "./../sections/about/About";
+import Skill from "./../sections/about/Skill";
 
 const AboutView = () => {
   return (
