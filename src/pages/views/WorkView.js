@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Events from "../../sections/work/Events";
+import Events from "./work/Events";
 
 const WorkView = ({ events }) => {
   const timelineContainerRef = useRef(null);

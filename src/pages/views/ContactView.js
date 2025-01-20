@@ -1,6 +1,6 @@
 import React from "react";
-import Profile from "../../sections/contact/Profile.js";
-import ContactForm from "../../sections/contact/ContactForm.js";
+import Profile from "./contact/Profile.js";
+import ContactForm from "./contact/ContactForm.js";
 
 const ContactView = ({ profile }) => {
   return (

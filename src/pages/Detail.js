@@ -2,12 +2,12 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Title from "./../sections/detail/Title";
-import Feature from "./../sections/detail/Feature";
-import Overview from "./../sections/detail/Overview";
-import Attach from "./../sections/detail/Attach";
-import Contribution from "./../sections/detail/Contribution";
-import Problem from "./../sections/detail/Problem";
+import Title from "./views/detail/Title";
+import Feature from "./views/detail/Feature";
+import Overview from "./views/detail/Overview";
+import Attach from "./views/detail/Attach";
+import Contribution from "./views/detail/Contribution";
+import Problem from "./views/detail/Problem";
 
 const Detail = ({ data }) => {
   const { id } = useParams(); // URL의 id를 가져옴

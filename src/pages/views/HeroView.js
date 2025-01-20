@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import VANTA from "vanta/dist/vanta.net.min";
-import Typing from "../../sections/hero/Typing";
-import GrowUp from "../../sections/hero/GrowUp";
+import Typing from "./hero/Typing";
+import GrowUp from "./hero/GrowUp";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 

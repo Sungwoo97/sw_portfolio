@@ -1,5 +1,5 @@
 import React from "react";
-import List from "../../sections/project/List";
+import List from "./project/List";
 
 const ProjectView = ({ list }) => {
   return (
