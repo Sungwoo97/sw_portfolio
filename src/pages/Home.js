@@ -25,7 +25,6 @@ const Home = ({ data }) => {
   }, [cssPath]);
   return (
     <>
-      <loading />
       <Header />
       <main>
         <HeroView />
