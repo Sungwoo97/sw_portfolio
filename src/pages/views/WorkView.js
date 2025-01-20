@@ -21,15 +21,14 @@ const WorkView = ({ events }) => {
     setTimeline(height); // 상태로 관리
   }, [events]); // 의존성이 없는 경우 빈 배열
 
-  const handleResize = useCallback(() => {
-    timelineBar();
-  }, [timelineBar]); // 필요한 의존성을 여기에 추가
-
   useEffect(() => {
     // 타임라인 높이 계산
     timelineBar();
 
     // 리사이즈 이벤트 핸들러
+    const handleResize = () => {
+      timelineBar();
+    };
 
     // resize 이벤트 리스너 등록
     window.addEventListener("resize", handleResize);
@@ -38,7 +37,7 @@ const WorkView = ({ events }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [timelineBar, handleResize]); // events가 변경될 때마다 다시 계산
+  }, [timelineBar]); // events가 변경될 때마다 다시 계산
 
   return (
     <section className="experience" id="exp" ref={timelineContainerRef}>
@@ -52,7 +51,7 @@ const WorkView = ({ events }) => {
             }}
           ></span>
           {events.map((event, index) => (
-            <Events key={index} event={event} index={index} />
+            <Events key={index} event={event} />
           ))}
         </div>
       </div>
