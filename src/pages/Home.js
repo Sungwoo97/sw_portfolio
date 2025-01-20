@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import HeroView from "./../views/HeroView";
+import HeroView from "./../views/HeroView.js";
 import AboutView from "./../views/AboutView";
 import WorkView from "./../views/WorkView";
 import ProjectView from "./../views/ProjectView";
