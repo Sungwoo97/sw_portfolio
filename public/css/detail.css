@@ -6,6 +6,10 @@ main .detail {
   flex-direction: column;
   gap: 20px;
 }
+main .detail section {
+  height: auto;
+  margin-bottom: 30px;
+}
 /* Title */
 .title h2 {
   font-size: 36px;
@@ -59,9 +63,9 @@ main .detail {
   line-height: 24px;
 }
 /* Attach */
-.attach {
+main .detail .attach {
   width: 100%;
-  height: 700px;
+  height: 400px;
 }
 .attach img {
   width: 100%;

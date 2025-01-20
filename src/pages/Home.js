@@ -13,19 +13,18 @@ import ContactView from "../views/ContactView";
 const Home = ({ data }) => {
   const cssPath = `${process.env.PUBLIC_URL}/css/main.css`;
 
-  // useEffect(() => {
-  //   const link = document.createElement("link");
-  //   link.rel = "stylesheet";
-  //   link.href = cssPath;
-  //   document.head.appendChild(link);
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = cssPath;
+    document.head.appendChild(link);
 
-  //   return () => {
-  //     document.head.removeChild(link); // 페이지 변경 시 제거
-  //   };
-  // }, [cssPath]);
+    return () => {
+      document.head.removeChild(link); // 페이지 변경 시 제거
+    };
+  }, [cssPath]);
   return (
     <>
-      <link rel="stylesheet" href="./../css/main.css" precedence="default" />
       <Header />
       <main>
         <HeroView />

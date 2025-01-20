@@ -16,32 +16,38 @@ const Detail = ({ data }) => {
 
   const cssPath = `${process.env.PUBLIC_URL}/css/detail.css`;
 
-  //페이지 별로 다른 css 파일을 적용하기 위해 useEffect 사용
-  // useEffect(() => {
-  //   const link = document.createElement("link");
-  //   link.rel = "stylesheet";
-  //   link.href = cssPath;
-  //   document.head.appendChild(link);
+  // 페이지 별로 다른 css 파일을 적용하기 위해 useEffect 사용
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = cssPath;
+    document.head.appendChild(link);
 
-  //   return () => {
-  //     document.head.removeChild(link); // 페이지 변경 시 제거
-  //   };
-  // }, [cssPath]);
+    return () => {
+      document.head.removeChild(link); // 페이지 변경 시 제거
+    };
+  }, [cssPath]);
 
   if (!item) return <p>Item not found</p>;
 
   return (
     <>
-      <link rel="stylesheet" href="./../css/detail.css" precedence="default" />
       <Header />
       <main>
         <div class="detail container">
-          <Title data={item} />
-          <Feature data={item} />
-          <Overview data={item} />
-          <Attach data={item} />
-          <Contribution data={item} />
-          <Problem data={item} />
+          <div class="row">
+            <div class="col-md-8">
+              <Title data={item} />
+              <Feature data={item} />
+              <Overview data={item} />
+
+              <Contribution data={item} />
+              <Problem data={item} />
+            </div>
+            <div class="col-md-4">
+              <Attach data={item} />
+            </div>
+          </div>
         </div>
       </main>
       <Footer />
