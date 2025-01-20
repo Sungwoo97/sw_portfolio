@@ -11,15 +11,15 @@ const WorkView = ({ events }) => {
     const height = 134 * eventCount + 85 * 2; // 계산식 적용
     setTimeline(height); // 상태로 관리
   };
+  const handleResize = () => {
+    timelineBar();
+  };
 
   useEffect(() => {
     // 타임라인 높이 계산
     timelineBar();
 
     // 리사이즈 이벤트 핸들러
-    const handleResize = () => {
-      timelineBar();
-    };
 
     // resize 이벤트 리스너 등록
     window.addEventListener("resize", handleResize);
@@ -28,7 +28,7 @@ const WorkView = ({ events }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [timelineBar, events]); // events가 변경될 때마다 다시 계산
+  }, [timelineBar, events, handleResize]); // events가 변경될 때마다 다시 계산
 
   return (
     <section className="experience" id="exp" ref={timelineContainerRef}>

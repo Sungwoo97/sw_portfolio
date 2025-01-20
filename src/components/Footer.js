@@ -5,8 +5,8 @@ const Footer = () => {
     <footer>
       <div className="container">
         <div className="footer_head">
-          <h2 className="">
-            <a href="/" className="logo"></a>
+          <h2>
+            <a href="/" aria-label="logo" className="logo"></a>
           </h2>
           <ul className="icons">
             <li>
@@ -21,7 +21,7 @@ const Footer = () => {
                 rel="noreferrer"
                 aria-label="github"
               >
-                <img src="../img/footer_github.svg" alt="" />
+                <img src="../img/footer_github.svg" alt="github" />
               </a>
             </li>
             <li>
@@ -31,12 +31,12 @@ const Footer = () => {
                 rel="noreferrer"
                 aria-label="notion"
               >
-                <img src="../img/footer_notion.svg" alt="" />
+                <img src="../img/footer_notion.svg" alt="notion" />
               </a>
             </li>
             <li>
-              <a href="/">
-                <img src="../img/footer_instagram.svg" alt="" />
+              <a href="/" aria-label="insta">
+                <img src="../img/footer_instagram.svg" alt="insta" />
               </a>
             </li>
           </ul>
