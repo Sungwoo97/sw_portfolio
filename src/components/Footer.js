@@ -6,21 +6,31 @@ const Footer = () => {
       <div className="container">
         <div className="footer_head">
           <h2 className="">
-            <a href="index.html" className="logo"></a>
+            <a href="/" className="logo"></a>
           </h2>
           <ul className="icons">
             <li>
-              <a href="/">
+              <a href="/" aria-label="email">
                 <img src="../img/footer_email.svg" alt="" />
               </a>
             </li>
             <li>
-              <a href="/">
+              <a
+                href="https://github.com/Sungwoo97"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="github"
+              >
                 <img src="../img/footer_github.svg" alt="" />
               </a>
             </li>
             <li>
-              <a href="/">
+              <a
+                href="https://jagged-periwinkle-b90.notion.site/174906281d3380d3a4a3f0be8e09c88b?pvs=4"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="notion"
+              >
                 <img src="../img/footer_notion.svg" alt="" />
               </a>
             </li>
@@ -33,19 +43,29 @@ const Footer = () => {
         </div>
         <ul className="bottom_nav">
           <li>
-            <a href="/">HOME</a>
+            <a href="/" aria-label="HOME">
+              HOME
+            </a>
           </li>
           <li>
-            <a href="/">ABOUT</a>
+            <a href="#about" aria-label="ABOUT">
+              ABOUT
+            </a>
           </li>
           <li>
-            <a href="/">WORK</a>
+            <a href="#exp" aria-label="WORK">
+              WORK
+            </a>
           </li>
           <li>
-            <a href="/">PROJECT</a>
+            <a href="#project" aria-label="PROJECT">
+              PROJECT
+            </a>
           </li>
           <li>
-            <a href="/">CONTACT</a>
+            <a href="#contact" aria-label="CONTACT">
+              CONTACT
+            </a>
           </li>
         </ul>
         <p>
