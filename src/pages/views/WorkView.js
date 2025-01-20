@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import Events from "./work/Events";
 
 const WorkView = ({ events }) => {
@@ -6,14 +6,24 @@ const WorkView = ({ events }) => {
   const timelineSpanRef = useRef(null);
   const [timeline, setTimeline] = useState(0);
 
-  const timelineBar = () => {
+  // const timelineBar = () => {
+  //   const eventCount = events.length;
+  //   const height = 134 * eventCount + 85 * 2; // 계산식 적용
+  //   setTimeline(height); // 상태로 관리
+  // };
+  // const handleResize = () => {
+  //   timelineBar();
+  // };
+
+  const timelineBar = useCallback(() => {
     const eventCount = events.length;
     const height = 134 * eventCount + 85 * 2; // 계산식 적용
     setTimeline(height); // 상태로 관리
-  };
-  const handleResize = () => {
+  }, [events]); // 의존성이 없는 경우 빈 배열
+
+  const handleResize = useCallback(() => {
     timelineBar();
-  };
+  }, [timelineBar]); // 필요한 의존성을 여기에 추가
 
   useEffect(() => {
     // 타임라인 높이 계산
@@ -28,7 +38,7 @@ const WorkView = ({ events }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [timelineBar, events, handleResize]); // events가 변경될 때마다 다시 계산
+  }, [timelineBar, handleResize]); // events가 변경될 때마다 다시 계산
 
   return (
     <section className="experience" id="exp" ref={timelineContainerRef}>
