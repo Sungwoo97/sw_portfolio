@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import Mini from "./../sections/mini/MiniCard";
+import Mini from "../../sections/mini/MiniCard";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const SampleNextArrow = ({ onClick }) => (
