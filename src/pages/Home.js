@@ -32,7 +32,7 @@ const Home = ({ data }) => {
         <WorkView events={data.work} />
         <BgParallax />
         <ProjectView list={data.projects} />
-        <MinimalView mini={data.mini} />
+        {/* <MinimalView mini={data.mini} /> */}
         <ContactView profile={data.profile} />
       </main>
       <Footer />
