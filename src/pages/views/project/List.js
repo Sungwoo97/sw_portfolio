@@ -19,6 +19,7 @@ const List = ({ list }) => {
           <a
             href={list.links.live}
             target="_blank"
+            rel="noreferrer"
             className="button btn hover_btn"
           >
             이동하기

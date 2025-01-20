@@ -10,22 +10,22 @@ const Footer = () => {
           </h2>
           <ul className="icons">
             <li>
-              <a href="">
+              <a href="/">
                 <img src="../img/footer_email.svg" alt="" />
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="/">
                 <img src="../img/footer_github.svg" alt="" />
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="/">
                 <img src="../img/footer_notion.svg" alt="" />
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="/">
                 <img src="../img/footer_instagram.svg" alt="" />
               </a>
             </li>
@@ -33,19 +33,19 @@ const Footer = () => {
         </div>
         <ul className="bottom_nav">
           <li>
-            <a href="">HOME</a>
+            <a href="/">HOME</a>
           </li>
           <li>
-            <a href="">ABOUT</a>
+            <a href="/">ABOUT</a>
           </li>
           <li>
-            <a href="">WORK</a>
+            <a href="/">WORK</a>
           </li>
           <li>
-            <a href="">PROJECT</a>
+            <a href="/">PROJECT</a>
           </li>
           <li>
-            <a href="">CONTACT</a>
+            <a href="/">CONTACT</a>
           </li>
         </ul>
         <p>

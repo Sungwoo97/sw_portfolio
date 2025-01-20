@@ -28,7 +28,7 @@ const WorkView = ({ events }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [events]); // events가 변경될 때마다 다시 계산
+  }, [timelineBar]); // events가 변경될 때마다 다시 계산
 
   return (
     <section className="experience" id="exp" ref={timelineContainerRef}>
