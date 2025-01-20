@@ -11,6 +11,7 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "cra-template": "1.2.0",
+    "emailjs-com": "^3.2.0",
     "font-awesome": "^4.7.0",
     "framer-motion": "^11.17.0",
     "jquery": "^3.7.1",
