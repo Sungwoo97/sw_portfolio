@@ -5,7 +5,7 @@ const Problem = ({ data }) => {
   return (
     <section className="problem">
       <h3>프로젝트 문제 해결</h3>
-      <Accordion flush>
+      <Accordion alwaysOpen>
         {data.problems.map((problem, index) => (
           <Accordion.Item key={index} eventKey={index}>
             <Accordion.Header>{problem.title}</Accordion.Header>
