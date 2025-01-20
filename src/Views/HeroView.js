@@ -5,7 +5,7 @@ import GrowUp from "./../sections/hero/GrowUp";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Hero = () => {
+const HeroView = () => {
   const [vantaEffect, setVantaEffect] = useState(null);
   const myRef = useRef(null);
 
@@ -114,4 +114,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroView;
