@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
+import { HelmetProvider } from "react-helmet-async";
 
+import Helmet from "../components/Helmet";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import HeroView from "./views/HeroView.js";
@@ -24,7 +26,8 @@ const Home = ({ data }) => {
     };
   }, [cssPath]);
   return (
-    <>
+    <HelmetProvider>
+      <Helmet />
       <Header />
       <main>
         <HeroView />
@@ -36,7 +39,7 @@ const Home = ({ data }) => {
         <ContactView profile={data.profile} />
       </main>
       <Footer />
-    </>
+    </HelmetProvider>
   );
 };
 export default Home;
