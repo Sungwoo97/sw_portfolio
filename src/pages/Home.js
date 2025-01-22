@@ -33,7 +33,7 @@ const Home = ({ data }) => {
         <HeroView />
         <AboutView />
         <WorkView events={data.work} />
-        <BgParallax />
+        {/* <BgParallax /> */}
         <ProjectView list={data.projects} />
         {/* <MinimalView mini={data.mini} /> */}
         <ContactView profile={data.profile} />
