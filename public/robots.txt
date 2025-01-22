@@ -1,3 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# 중요한 페이지를 더 빠르게 인덱싱하기 위한 사이트맵 경로
+Sitemap: https://sw-portfolio-site.netlify.app/sitemap.xml
