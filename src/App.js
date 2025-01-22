@@ -1,3 +1,5 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Loading from "./components/Loading";
@@ -5,6 +7,7 @@ import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 
 import data from "./data.json";
+import Insert from "./pages/Insert";
 
 function App() {
   const [isCDNLoaded, setIsCDNLoaded] = useState(false);
@@ -49,6 +52,7 @@ function App() {
               path="/detail/:id"
               element={<Detail data={data.detail_projects} />}
             />
+            <Route path="/insert" element={<Insert />} />
           </Routes>
         </Router>
       )}

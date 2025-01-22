@@ -248,7 +248,7 @@ line {
   margin-top: 30px;
 }
 /* Skill */
-.skill {
+.about .skill {
   /* overflow: hidden; */
   position: absolute;
   top: 100px;
@@ -394,7 +394,7 @@ section.bg {
   align-items: center;
   overflow: hidden;
   h1 {
-    background: url(./img/dev_env.png) no-repeat center center/cover;
+    /* background: url(./img/dev_env.png) no-repeat center center/cover; */
     z-index: 2;
   }
   img {
