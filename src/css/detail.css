@@ -1,7 +1,7 @@
 main {
-  margin-top: 131px;
 }
 main .detail {
+  margin-top: 131px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -22,12 +22,12 @@ main .detail section {
   font-weight: normal;
 }
 /* Skill */
-.skill ul {
+.title .skill ul {
   display: flex;
   gap: 20px;
   justify-content: start;
 }
-.skill ul > li {
+.title .skill ul > li {
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
