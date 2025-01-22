@@ -23,7 +23,11 @@
 }
 .main p {
   font-size: 20px;
-  line-height: 48px;
+  line-height: 30px;
+}
+.main .growUp div {
+  font-size: 20px;
+  line-height: 30px;
 }
 line {
   stroke: #fff;
