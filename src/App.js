@@ -24,8 +24,8 @@ function App() {
     };
 
     loadCDNResources()
-      .then((message) => {
-        console.log(message); // 성공적으로 CDN 로드됨
+      .then(() => {
+        // console.log(message); // 성공적으로 CDN 로드됨
         setIsCDNLoaded(true); // CDN이 로드되었음을 표시
       })
       .catch((error) => {
