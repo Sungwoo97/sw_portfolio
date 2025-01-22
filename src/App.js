@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 
 import data from "./data.json";
+import Insert from "./pages/Insert";
 
 function App() {
   const [isCDNLoaded, setIsCDNLoaded] = useState(false);
@@ -49,6 +50,7 @@ function App() {
               path="/detail/:id"
               element={<Detail data={data.detail_projects} />}
             />
+            <Route path="/insert" element={<Insert />} />
           </Routes>
         </Router>
       )}
