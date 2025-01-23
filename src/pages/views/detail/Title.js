@@ -13,6 +13,18 @@ const Title = ({ data }) => {
           ))}
         </ul>
       </div>
+      <ul className="link">
+        <li>
+          <a href={data.links.github} target="_blank" rel="noreferrer">
+            <img src="./../img/github.svg" width="30" alt="github" />
+          </a>
+        </li>
+        <li>
+          <a href={data.links.live} target="_blank" rel="noreferrer">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </li>
+      </ul>
     </section>
   );
 };
