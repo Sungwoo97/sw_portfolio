@@ -12,24 +12,31 @@ const Insert = () => {
   const [session, setSession] = useState(null);
   const navigate = useNavigate(); //useNavigate 초기화(실행)
 
+  //
+  // useEffect(() => {
+  //   supabase.auth.getSession().then(({ data: { session } }) => {
+  //     setSession(session);
+  //   });
+
+  //   const {
+  //     data: { subscription },
+  //   } = supabase.auth.onAuthStateChange((_event, session) => {
+  //     setSession(session);
+  //   });
+
+  //   return () => subscription.unsubscribe();
+  // }, [session]);
+
+  // supabase의 로그인 데이터를 가져와서 데이터가 없다면 login 페이지로
   useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-    });
-
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session);
-    });
-
-    return () => subscription.unsubscribe();
-  }, [session]);
-
-  useEffect(() => {
-    if (!session) {
-      navigate("/login");
-    }
+    const checkSession = async () => {
+      const { data } = await supabase.auth.getSession();
+      setSession(data);
+      if (!data.session) {
+        navigate("/login"); // 세션 없을 시 로그인 페이지로 이동
+      }
+    };
+    checkSession();
   }, [session]);
 
   return (

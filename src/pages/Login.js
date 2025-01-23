@@ -26,7 +26,7 @@ const Login = () => {
     console.log(data);
     if (data.user) {
       console.log("로그인 성공");
-      navigate("/insert"); // Redirect to /insert page on successful login
+      navigate("/insert", { replace: true }); // Redirect to /insert page on successful login
     } else {
       console.log(error);
     }
