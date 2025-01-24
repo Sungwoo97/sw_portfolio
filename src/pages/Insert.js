@@ -5,27 +5,12 @@ import { HelmetProvider } from "react-helmet-async";
 import Helmet from "../components/Helmet";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-// import InsertFrom from "./views/insert/InsertFrom";
+import InsertFrom from "./views/insert/InsertFrom";
 import { supabase } from "../supabase";
 
 const Insert = () => {
   const [session, setSession] = useState(null);
   const navigate = useNavigate(); //useNavigate 초기화(실행)
-
-  //
-  // useEffect(() => {
-  //   supabase.auth.getSession().then(({ data: { session } }) => {
-  //     setSession(session);
-  //   });
-
-  //   const {
-  //     data: { subscription },
-  //   } = supabase.auth.onAuthStateChange((_event, session) => {
-  //     setSession(session);
-  //   });
-
-  //   return () => subscription.unsubscribe();
-  // }, [session]);
 
   // supabase의 로그인 데이터를 가져와서 데이터가 없다면 login 페이지로
   useEffect(() => {
@@ -45,7 +30,7 @@ const Insert = () => {
       <Header />
       <main>
         <section className="insert container" id="insert">
-          {/* <InsertFrom /> */}
+          <InsertFrom />
         </section>
       </main>
       <Footer />

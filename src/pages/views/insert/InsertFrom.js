@@ -2,190 +2,197 @@ import React, { useState } from "react";
 import { supabase } from "../../../supabase";
 
 const InsertFrom = () => {
-  console.log(supabase);
   const [formData, setFormData] = useState({
     id: "",
     title: "",
     member_count: "",
-    skills: "",
-    features: "",
+    skills: [], // Array instead of comma-separated input
+    features: [], // Array instead of comma-separated input
     overview: "",
-    attach_image: "",
-    attach_description: "",
+    attach: "",
     contribution: "",
-    problem_title: "",
-    problem_issue: "",
-    problem_cause: "",
-    problem_solution: "",
+    problems: "",
   });
+
+  const [skillInput, setSkillInput] = useState("");
+  const [featureInput, setFeatureInput] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  const addSkill = () => {
+    if (skillInput.trim()) {
+      setFormData({
+        ...formData,
+        skills: [...formData.skills, skillInput.trim()],
+      });
+      setSkillInput("");
+    }
+  };
+
+  const removeSkill = (index) => {
+    const updatedSkills = formData.skills.filter((_, i) => i !== index);
+    setFormData({ ...formData, skills: updatedSkills });
+  };
+
+  const addFeature = () => {
+    if (featureInput.trim()) {
+      setFormData({
+        ...formData,
+        features: [...formData.features, featureInput.trim()],
+      });
+      setFeatureInput("");
+    }
+  };
+
+  const removeFeature = (index) => {
+    const updatedFeatures = formData.features.filter((_, i) => i !== index);
+    setFormData({ ...formData, features: updatedFeatures });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const { data, error } = await supabase
-        .from("projects")
-        .insert([formData]);
 
-      if (error) {
-        console.error("Error inserting data:", error);
-        alert("Error submitting the form");
-      } else {
-        console.log("Data successfully inserted:", data);
-        alert("Form submitted successfully");
-      }
-    } catch (error) {
-      console.error("Unexpected error:", error);
-      alert("Unexpected error occurred");
+    const dataToSubmit = {
+      ...formData,
+      member_count: parseInt(formData.member_count, 10),
+      attach: JSON.parse(formData.attach),
+      problems: JSON.parse(formData.problems),
+    };
+
+    const { data, error } = await supabase
+      .from("projects")
+      .insert([dataToSubmit]);
+
+    if (error) {
+      console.error("Error inserting data:", error);
+    } else {
+      console.log("Data inserted successfully:", data);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="col-md-6">
-      <label htmlFor="title" className="hidden">
-        Title
-      </label>
-      <input
-        type="text"
-        id="title"
-        name="title"
-        placeholder="Title"
-        value={formData.title}
-        onChange={handleChange}
-      />
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label>ID:</label>
+        <input
+          type="text"
+          name="id"
+          value={formData.id}
+          onChange={handleChange}
+          required
+        />
+      </div>
 
-      <label htmlFor="member_count" className="hidden">
-        Member Count
-      </label>
-      <input
-        type="number"
-        id="member_count"
-        name="member_count"
-        placeholder="Member Count"
-        value={formData.member_count}
-        onChange={handleChange}
-      />
+      <div>
+        <label>Title:</label>
+        <input
+          type="text"
+          name="title"
+          value={formData.title}
+          onChange={handleChange}
+          required
+        />
+      </div>
 
-      <label htmlFor="skills" className="hidden">
-        Skills
-      </label>
-      <textarea
-        id="skills"
-        name="skills"
-        placeholder="Skills (comma-separated)"
-        value={formData.skills}
-        onChange={handleChange}
-      ></textarea>
+      <div>
+        <label>Member Count:</label>
+        <input
+          type="number"
+          name="member_count"
+          value={formData.member_count}
+          onChange={handleChange}
+          required
+        />
+      </div>
 
-      <label htmlFor="features" className="hidden">
-        Features
-      </label>
-      <textarea
-        id="features"
-        name="features"
-        placeholder="Features (one per line)"
-        value={formData.features}
-        onChange={handleChange}
-      ></textarea>
+      <div>
+        <label>Skills:</label>
+        <div>
+          <input
+            type="text"
+            value={skillInput}
+            onChange={(e) => setSkillInput(e.target.value)}
+          />
+          <button type="button" onClick={addSkill}>
+            Add
+          </button>
+        </div>
+        <ul>
+          {formData.skills.map((skill, index) => (
+            <li key={index}>
+              {skill}{" "}
+              <button type="button" onClick={() => removeSkill(index)}>
+                x
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-      <label htmlFor="overview" className="hidden">
-        Overview
-      </label>
-      <textarea
-        id="overview"
-        name="overview"
-        placeholder="Overview (one per line)"
-        value={formData.overview}
-        onChange={handleChange}
-      ></textarea>
+      <div>
+        <label>Features:</label>
+        <div>
+          <input
+            type="text"
+            value={featureInput}
+            onChange={(e) => setFeatureInput(e.target.value)}
+          />
+          <button type="button" onClick={addFeature}>
+            Add
+          </button>
+        </div>
+        <ul>
+          {formData.features.map((feature, index) => (
+            <li key={index}>
+              {feature}{" "}
+              <button type="button" onClick={() => removeFeature(index)}>
+                x
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-      <label htmlFor="attach_image" className="hidden">
-        Attach Image
-      </label>
-      <input
-        type="text"
-        id="attach_image"
-        name="attach_image"
-        placeholder="Attach Image URL"
-        value={formData.attach_image}
-        onChange={handleChange}
-      />
+      <div>
+        <label>Overview:</label>
+        <textarea
+          name="overview"
+          value={formData.overview}
+          onChange={handleChange}
+        />
+      </div>
 
-      <label htmlFor="attach_description" className="hidden">
-        Attach Description
-      </label>
-      <input
-        type="text"
-        id="attach_description"
-        name="attach_description"
-        placeholder="Attach Description"
-        value={formData.attach_description}
-        onChange={handleChange}
-      />
+      <div>
+        <label>Attach (JSON string):</label>
+        <textarea
+          name="attach"
+          value={formData.attach}
+          onChange={handleChange}
+        />
+      </div>
 
-      <label htmlFor="contribution" className="hidden">
-        Contributions
-      </label>
-      <textarea
-        id="contribution"
-        name="contribution"
-        placeholder="Contributions (one per line)"
-        value={formData.contribution}
-        onChange={handleChange}
-      ></textarea>
+      <div>
+        <label>Contribution:</label>
+        <textarea
+          name="contribution"
+          value={formData.contribution}
+          onChange={handleChange}
+        />
+      </div>
 
-      <label htmlFor="problem_title" className="hidden">
-        Problem Title
-      </label>
-      <input
-        type="text"
-        id="problem_title"
-        name="problem_title"
-        placeholder="Problem Title"
-        value={formData.problem_title}
-        onChange={handleChange}
-      />
+      <div>
+        <label>Problems (JSON string):</label>
+        <textarea
+          name="problems"
+          value={formData.problems}
+          onChange={handleChange}
+        />
+      </div>
 
-      <label htmlFor="problem_issue" className="hidden">
-        Problem Issue
-      </label>
-      <textarea
-        id="problem_issue"
-        name="problem_issue"
-        placeholder="Problem Issue"
-        value={formData.problem_issue}
-        onChange={handleChange}
-      ></textarea>
-
-      <label htmlFor="problem_cause" className="hidden">
-        Problem Cause
-      </label>
-      <textarea
-        id="problem_cause"
-        name="problem_cause"
-        placeholder="Problem Cause"
-        value={formData.problem_cause}
-        onChange={handleChange}
-      ></textarea>
-
-      <label htmlFor="problem_solution" className="hidden">
-        Problem Solution
-      </label>
-      <textarea
-        id="problem_solution"
-        name="problem_solution"
-        placeholder="Problem Solution"
-        value={formData.problem_solution}
-        onChange={handleChange}
-      ></textarea>
-
-      <button type="submit" className="btn">
-        입력
-      </button>
+      <button type="submit">Submit</button>
     </form>
   );
 };
