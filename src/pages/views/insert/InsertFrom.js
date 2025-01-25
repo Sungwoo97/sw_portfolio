@@ -74,23 +74,13 @@ const InsertFrom = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="col-md-8" onSubmit={handleSubmit}>
       <div>
-        <label>ID:</label>
-        <input
-          type="text"
-          name="id"
-          value={formData.id}
-          onChange={handleChange}
-          required
-        />
-      </div>
-
-      <div>
-        <label>Title:</label>
+        <label className="hidden">Title:</label>
         <input
           type="text"
           name="title"
+          placeholder="Title"
           value={formData.title}
           onChange={handleChange}
           required
@@ -98,10 +88,11 @@ const InsertFrom = () => {
       </div>
 
       <div>
-        <label>Member Count:</label>
+        <label className="hidden">Member Count:</label>
         <input
           type="number"
           name="member_count"
+          placeholder="Member Count"
           value={formData.member_count}
           onChange={handleChange}
           required
@@ -109,10 +100,11 @@ const InsertFrom = () => {
       </div>
 
       <div>
-        <label>Skills:</label>
+        <label className="hidden">Skills:</label>
         <div>
           <input
             type="text"
+            placeholder="Skills"
             value={skillInput}
             onChange={(e) => setSkillInput(e.target.value)}
           />
@@ -124,7 +116,11 @@ const InsertFrom = () => {
           {formData.skills.map((skill, index) => (
             <li key={index}>
               {skill}{" "}
-              <button type="button" onClick={() => removeSkill(index)}>
+              <button
+                className="btn"
+                type="button"
+                onClick={() => removeSkill(index)}
+              >
                 x
               </button>
             </li>
@@ -133,11 +129,12 @@ const InsertFrom = () => {
       </div>
 
       <div>
-        <label>Features:</label>
+        <label className="hidden">Features:</label>
         <div>
           <input
             type="text"
             value={featureInput}
+            placeholder="Features"
             onChange={(e) => setFeatureInput(e.target.value)}
           />
           <button type="button" onClick={addFeature}>
@@ -157,42 +154,49 @@ const InsertFrom = () => {
       </div>
 
       <div>
-        <label>Overview:</label>
+        <label className="hidden">Overview:</label>
         <textarea
           name="overview"
+          placeholder="Overview"
           value={formData.overview}
           onChange={handleChange}
         />
       </div>
 
       <div>
-        <label>Attach (JSON string):</label>
+        <label className="hidden">Attach (JSON string):</label>
         <textarea
           name="attach"
+          placeholder="Attach"
           value={formData.attach}
           onChange={handleChange}
         />
       </div>
 
       <div>
-        <label>Contribution:</label>
+        <label className="hidden">Contribution:</label>
         <textarea
           name="contribution"
+          placeholder="Contribution"
           value={formData.contribution}
           onChange={handleChange}
         />
       </div>
 
       <div>
-        <label>Problems (JSON string):</label>
+        <label className="hidden">Problems (JSON string):</label>
         <textarea
           name="problems"
+          placeholder="Problems"
           value={formData.problems}
           onChange={handleChange}
+          npm
         />
       </div>
 
-      <button type="submit">Submit</button>
+      <button className="btn" type="submit">
+        입력
+      </button>
     </form>
   );
 };

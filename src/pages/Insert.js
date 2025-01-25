@@ -29,7 +29,7 @@ const Insert = () => {
       <Helmet />
       <Header />
       <main>
-        <section className="insert container" id="insert">
+        <section className="insert container row" id="insert">
           <InsertFrom />
         </section>
       </main>
