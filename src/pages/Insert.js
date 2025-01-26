@@ -30,12 +30,10 @@ const Insert = () => {
       <Helmet />
       <Header />
       <main>
-        <section className="insert container row" id="insert">
+        <section className="insert container" id="insert">
           <InsertFrom />
-        </section>
-        <aside>
           <Logout />
-        </aside>
+        </section>
       </main>
       <Footer />
     </HelmetProvider>

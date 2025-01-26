@@ -2,6 +2,7 @@
   margin-top: 131px;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 .insert form {
   display: flex;
@@ -38,4 +39,37 @@
 .insert textarea:focus {
   outline: 4px solid var(--secondary);
   outline-offset: 1px;
+}
+.insert .arrayInput {
+  display: flex;
+  button {
+    width: 200px;
+  }
+}
+.insert .arrayList {
+  margin-top: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px;
+  li {
+    overflow-wrap: break-word;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    border: 1px solid #6e6e6e;
+    padding: 3px 15px;
+  }
+}
+/* Logout */
+.logout {
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: var(--highlight);
+}
+.logout:hover {
+  background: #89716f;
 }

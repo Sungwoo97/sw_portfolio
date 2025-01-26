@@ -101,23 +101,23 @@ const InsertFrom = () => {
 
       <div>
         <label className="hidden">Skills:</label>
-        <div>
+        <div className="arrayInput">
           <input
             type="text"
             placeholder="Skills"
             value={skillInput}
             onChange={(e) => setSkillInput(e.target.value)}
           />
-          <button type="button" onClick={addSkill}>
-            Add
+          <button className="btn" type="button" onClick={addSkill}>
+            추가
           </button>
         </div>
-        <ul>
+        <ul className="arrayList">
           {formData.skills.map((skill, index) => (
             <li key={index}>
               {skill}{" "}
               <button
-                className="btn"
+                className=""
                 type="button"
                 onClick={() => removeSkill(index)}
               >
@@ -130,18 +130,18 @@ const InsertFrom = () => {
 
       <div>
         <label className="hidden">Features:</label>
-        <div>
+        <div className="arrayInput">
           <input
             type="text"
             value={featureInput}
             placeholder="Features"
             onChange={(e) => setFeatureInput(e.target.value)}
           />
-          <button type="button" onClick={addFeature}>
-            Add
+          <button className="btn" type="button" onClick={addFeature}>
+            추가
           </button>
         </div>
-        <ul>
+        <ul className="arrayList">
           {formData.features.map((feature, index) => (
             <li key={index}>
               {feature}{" "}
@@ -165,7 +165,8 @@ const InsertFrom = () => {
 
       <div>
         <label className="hidden">Attach (JSON string):</label>
-        <textarea
+        <input
+          type="file"
           name="attach"
           placeholder="Attach"
           value={formData.attach}
