@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import InsertFrom from "./views/insert/InsertFrom";
 import { supabase } from "../supabase";
+import Logout from "./views/insert/Logout";
 
 const Insert = () => {
   const [session, setSession] = useState(null);
@@ -32,6 +33,9 @@ const Insert = () => {
         <section className="insert container row" id="insert">
           <InsertFrom />
         </section>
+        <aside>
+          <Logout />
+        </aside>
       </main>
       <Footer />
     </HelmetProvider>
