@@ -16,6 +16,7 @@ const InsertFrom = () => {
 
   const [skillInput, setSkillInput] = useState("");
   const [featureInput, setFeatureInput] = useState("");
+  const [file, setFile] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -52,13 +53,42 @@ const InsertFrom = () => {
     setFormData({ ...formData, features: updatedFeatures });
   };
 
+  const handleFileChange = (e) => {
+    const attachFile = e.target.files[0];
+    setFile(attachFile);
+  };
+
+  async function uploadFile(file) {
+    const fileName = `${Date.now()}-${file.name}`;
+    const filePath = `attach/${fileName}`;
+    const { data, error } = await supabase.storage
+      .from("projects")
+      .upload(filePath, file);
+    if (error) {
+      alert("파일 업로드 실패");
+      console.log(error);
+    } else {
+      alert("파일 업로드 성공");
+      console.log(data);
+      return filePath;
+    }
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    let thumbnailPath = null;
+    if (file) {
+      const uploadedFilePath = await uploadFile(file);
+      if (uploadedFilePath) {
+        thumbnailPath = uploadedFilePath;
+      }
+    }
 
     const dataToSubmit = {
       ...formData,
       member_count: parseInt(formData.member_count, 10),
-      attach: JSON.parse(formData.attach),
+      attach: thumbnailPath,
       problems: JSON.parse(formData.problems),
     };
 
