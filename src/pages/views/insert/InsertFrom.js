@@ -3,7 +3,6 @@ import { supabase } from "../../../supabase";
 
 const InsertFrom = () => {
   const [formData, setFormData] = useState({
-    id: "",
     title: "",
     member_count: "",
     skills: [], // Array instead of comma-separated input
@@ -11,11 +10,12 @@ const InsertFrom = () => {
     overview: "",
     attach: "",
     contribution: "",
-    problems: "",
+    problems: [],
   });
 
   const [skillInput, setSkillInput] = useState("");
   const [featureInput, setFeatureInput] = useState("");
+  const [problemInput, setProblemInput] = useState("");
   const [file, setFile] = useState(null);
 
   const handleChange = (e) => {
@@ -51,6 +51,21 @@ const InsertFrom = () => {
   const removeFeature = (index) => {
     const updatedFeatures = formData.features.filter((_, i) => i !== index);
     setFormData({ ...formData, features: updatedFeatures });
+  };
+
+  const addProblem = () => {
+    if (problemInput.trim()) {
+      setFormData({
+        ...formData,
+        problems: [...formData.problems, problemInput.trim()],
+      });
+      setProblemInput("");
+    }
+  };
+
+  const removeProblem = (index) => {
+    const updatedProblem = formData.problems.filter((_, i) => i !== index);
+    setFormData({ ...formData, problems: updatedProblem });
   };
 
   const handleFileChange = (e) => {
@@ -194,8 +209,12 @@ const InsertFrom = () => {
       </div>
 
       <div>
-        <label className="hidden">Attach (JSON string):</label>
+        <label className="attachLabel" htmlFor="attach">
+          <div>Attach File Add</div>
+        </label>
         <input
+          id="attach"
+          className="hidden"
           type="file"
           name="attach"
           placeholder="Attach"
@@ -215,14 +234,33 @@ const InsertFrom = () => {
       </div>
 
       <div>
-        <label className="hidden">Problems (JSON string):</label>
-        <textarea
-          name="problems"
-          placeholder="Problems"
-          value={formData.problems}
-          onChange={handleChange}
-          npm
-        />
+        <div className="arrayInput">
+          <label className="hidden">Problems (JSON string):</label>
+          <input
+            type="text"
+            name="problems"
+            placeholder="Problems"
+            value={problemInput}
+            onChange={(e) => setProblemInput(e.target.value)}
+          />
+          <button className="btn" type="button" onClick={addProblem}>
+            추가
+          </button>
+        </div>
+        <ul className="arrayList">
+          {formData.problems.map((problem, index) => (
+            <li key={index}>
+              {problem}{" "}
+              <button
+                className=""
+                type="button"
+                onClick={() => removeProblem(index)}
+              >
+                x
+              </button>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <button className="btn" type="submit">
