@@ -104,7 +104,6 @@ const InsertFrom = () => {
       ...formData,
       member_count: parseInt(formData.member_count, 10),
       attach: thumbnailPath,
-      problems: JSON.parse(formData.problems),
     };
 
     const { data, error } = await supabase
