@@ -31,6 +31,7 @@ const Insert = () => {
       <Header />
       <main>
         <section className="insert container" id="insert">
+          <h3>프로젝트 목록 입력</h3>
           <InsertFrom />
           <Logout />
         </section>

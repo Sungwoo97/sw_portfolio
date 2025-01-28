@@ -1,8 +1,15 @@
 .insert {
-  margin-top: 131px;
+  margin-top: 181px;
   display: flex;
   justify-content: center;
   position: relative;
+  flex-direction: column;
+  gap: 130px;
+  align-items: center;
+}
+.insert h3 {
+  font-size: 24px;
+  line-height: 31px;
 }
 .insert form {
   display: flex;
