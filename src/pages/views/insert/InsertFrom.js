@@ -261,7 +261,46 @@ const InsertFrom = () => {
           ))}
         </ul>
       </div>
-
+      <div>
+        <label className="hidden">title (JSON string):</label>
+        <input
+          type="text"
+          name="title"
+          placeholder="title"
+          value={problemInput}
+          onChange={(e) => setProblemInput(e.target.value)}
+        />
+      </div>
+      <div>
+        <label className="hidden">issue (JSON string):</label>
+        <input
+          type="text"
+          name="issue"
+          placeholder="issue"
+          value={problemInput}
+          onChange={(e) => setProblemInput(e.target.value)}
+        />
+      </div>
+      <div>
+        <label className="hidden">cause (JSON string):</label>
+        <input
+          type="text"
+          name="cause"
+          placeholder="cause"
+          value={problemInput}
+          onChange={(e) => setProblemInput(e.target.value)}
+        />
+      </div>
+      <div>
+        <label className="hidden">solution (JSON string):</label>
+        <input
+          type="text"
+          name="solution"
+          placeholder="solution"
+          value={problemInput}
+          onChange={(e) => setProblemInput(e.target.value)}
+        />
+      </div>
       <button className="btn" type="submit">
         입력
       </button>
