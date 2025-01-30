@@ -218,7 +218,7 @@ const InsertFrom = () => {
           name="attach"
           placeholder="Attach"
           value={formData.attach}
-          onChange={handleChange}
+          onChange={handleFileChange}
         />
       </div>
 
