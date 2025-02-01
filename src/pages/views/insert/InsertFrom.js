@@ -10,7 +10,10 @@ const InsertFrom = () => {
     overview: "",
     attach: "",
     contribution: "",
-    problems: [],
+    problems_title: [],
+    problems_issue: [],
+    problems_cause: [],
+    problems_solution: [],
   });
 
   const [skillInput, setSkillInput] = useState("");
