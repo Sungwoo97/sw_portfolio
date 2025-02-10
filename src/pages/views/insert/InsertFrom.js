@@ -10,20 +10,26 @@ const InsertFrom = () => {
     overview: "",
     attach: "",
     contribution: "",
-    problems_title: [],
-    problems_issue: [],
-    problems_cause: [],
-    problems_solution: [],
+    problems: [],
   });
 
   const [skillInput, setSkillInput] = useState("");
   const [featureInput, setFeatureInput] = useState("");
-  const [problemInput, setProblemInput] = useState("");
+  const [problemInput, setProblemInput] = useState({
+    title: "",
+    issue: "",
+    cause: "",
+    solution: "",
+  });
   const [file, setFile] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+  };
+  const handleProblemChange = (e) => {
+    const { name, value } = e.target;
+    setProblemInput({ ...problemInput, [name]: value });
   };
 
   const addSkill = () => {
@@ -57,18 +63,18 @@ const InsertFrom = () => {
   };
 
   const addProblem = () => {
-    if (problemInput.trim()) {
+    if (problemInput.title.trim()) {
       setFormData({
         ...formData,
-        problems: [...formData.problems, problemInput.trim()],
+        problems: [...formData.problems, problemInput],
       });
-      setProblemInput("");
+      setProblemInput({ title: "", issue: "", cause: "", solution: "" });
     }
   };
 
   const removeProblem = (index) => {
-    const updatedProblem = formData.problems.filter((_, i) => i !== index);
-    setFormData({ ...formData, problems: updatedProblem });
+    const updatedProblems = formData.problems.filter((_, i) => i !== index);
+    setFormData({ ...formData, problems: updatedProblems });
   };
 
   const handleFileChange = (e) => {
@@ -237,7 +243,38 @@ const InsertFrom = () => {
 
       <div>
         <div className="arrayInput">
-          <label className="hidden">Problems (JSON string):</label>
+          <input
+            type="text"
+            name="title"
+            placeholder="문제 제목"
+            value={problemInput.title}
+            onChange={handleProblemChange}
+          />
+          <input
+            type="text"
+            name="issue"
+            placeholder="이슈"
+            value={problemInput.issue}
+            onChange={handleProblemChange}
+          />
+          <input
+            type="text"
+            name="cause"
+            placeholder="원인"
+            value={problemInput.cause}
+            onChange={handleProblemChange}
+          />
+          <input
+            type="text"
+            name="solution"
+            placeholder="해결책"
+            value={problemInput.solution}
+            onChange={handleProblemChange}
+          />
+          <button type="button" onClick={addProblem}>
+            추가
+          </button>
+          {/* <label className="hidden">Problems (JSON string):</label>
           <input
             type="text"
             name="problems"
@@ -247,63 +284,21 @@ const InsertFrom = () => {
           />
           <button className="btn" type="button" onClick={addProblem}>
             추가
-          </button>
+          </button> */}
         </div>
         <ul className="arrayList">
           {formData.problems.map((problem, index) => (
             <li key={index}>
-              {problem}{" "}
-              <button
-                className=""
-                type="button"
-                onClick={() => removeProblem(index)}
-              >
+              <strong>{problem.title}</strong>: {problem.issue} →{" "}
+              {problem.cause} → {problem.solution}
+              <button type="button" onClick={() => removeProblem(index)}>
                 x
               </button>
             </li>
           ))}
         </ul>
       </div>
-      <div>
-        <label className="hidden">title (JSON string):</label>
-        <input
-          type="text"
-          name="title"
-          placeholder="title"
-          value={problemInput}
-          onChange={(e) => setProblemInput(e.target.value)}
-        />
-      </div>
-      <div>
-        <label className="hidden">issue (JSON string):</label>
-        <input
-          type="text"
-          name="issue"
-          placeholder="issue"
-          value={problemInput}
-          onChange={(e) => setProblemInput(e.target.value)}
-        />
-      </div>
-      <div>
-        <label className="hidden">cause (JSON string):</label>
-        <input
-          type="text"
-          name="cause"
-          placeholder="cause"
-          value={problemInput}
-          onChange={(e) => setProblemInput(e.target.value)}
-        />
-      </div>
-      <div>
-        <label className="hidden">solution (JSON string):</label>
-        <input
-          type="text"
-          name="solution"
-          placeholder="solution"
-          value={problemInput}
-          onChange={(e) => setProblemInput(e.target.value)}
-        />
-      </div>
+
       <button className="btn" type="submit">
         입력
       </button>
