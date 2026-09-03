@@ -43,7 +43,7 @@
         "UI/UX 분석 및 벤치마킹을 통한 트렌드 분석",
         "협업에 필요한 코딩컨벤션 활용"
       ],
-      "image": "./img/upload/kia_renewal.png",
+      "image": "./img/upload/Kia_Renewal.png",
       "links": {
         "github": "https://sungwoo97.github.io/KIA-Renewal-Project/",
         "live": "https://sungwoo97.github.io/KIA-Renewal-Project/"
@@ -59,7 +59,7 @@
         "Fetch 함수를 이용한 데이터 출력",
         "UI/UX 분석 및 벤치마킹을 통한 트렌드 분석"
       ],
-      "image": "./img/upload/lms_admin.png",
+      "image": "./img/upload/LMS_admin.png",
       "links": {
         "github": "http://3.39.192.39/qc/admin/login.php",
         "live": "http://3.39.192.39/qc/admin/login.php"
@@ -75,7 +75,7 @@
         "Fetch 함수를 이용한 데이터 출력",
         "UI/UX 분석 및 벤치마킹을 통한 트렌드 분석"
       ],
-      "image": "./img/upload/lms_user.png",
+      "image": "./img/upload/LMS_user.png",
       "links": {
         "github": "http://3.39.192.39/qc/index.php",
         "live": "http://3.39.192.39/qc/index.php"

@@ -6,7 +6,7 @@ const Typing = () => {
     <div className="text-container">
       <TypeAnimation
         sequence={[
-          "FRONT-END", // Types 'One'
+          "BACK-END", // Types 'One'
           4000, // Waits 1s
           "", // Types 'One'
           2000, // Waits 1s
