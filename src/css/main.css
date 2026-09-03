@@ -648,3 +648,146 @@ section.bg {
   outline: 4px solid var(--secondary);
   outline-offset: 1px;
 }
+
+/* =========================================================
+   RESPONSIVE (반응형) — 데스크톱 규칙 아래에 추가.
+   기존 스타일은 그대로 두고 좁은 화면에서만 덮어쓴다.
+   ========================================================= */
+
+/* 태블릿 이하: 겹쳐 있던 스킬/어바웃을 세로로 정리 */
+@media (max-width: 1024px) {
+  .about .content {
+    flex-wrap: wrap;
+  }
+  .about .content > .desc {
+    width: 100%;
+  }
+  .about .skill {
+    position: static;
+    top: auto;
+    right: auto;
+    height: auto;
+    margin-top: 40px;
+  }
+  .main .slick-list {
+    width: 100%;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  /* 히어로: 100px 텍스트가 화면을 넘던 것 축소 + 위치 정상화 */
+  .main {
+    gap: 8%;
+  }
+  .main .typeText,
+  .main .text {
+    font-size: 44px;
+  }
+  .text-container {
+    left: 0;
+    margin-left: 0;
+    top: 24%;
+    padding: 0 16px;
+  }
+  .main .content {
+    margin-top: 22%;
+    height: auto;
+  }
+  .main .slick-list {
+    width: 100%;
+  }
+  section {
+    font-size: 1.4rem;
+  }
+
+  /* About */
+  .about {
+    padding: 20px;
+    margin-bottom: 60px;
+  }
+  .about h3 {
+    font-size: 1.6rem;
+    line-height: 1.4;
+  }
+  .about h4 {
+    font-size: 1.2rem;
+  }
+  .about .blog {
+    flex-wrap: wrap;
+  }
+
+  /* Experience 타임라인 */
+  .timeline {
+    height: auto;
+    max-height: 65vh;
+    padding: 40px 0.5rem;
+  }
+  .event {
+    padding-left: 42%;
+    margin-bottom: 35px;
+  }
+
+  /* Project 리스트: 가로 배열을 세로로, hover 없는 모바일은 정보 항상 표시 */
+  .listSlides {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 16px;
+  }
+  .listContent {
+    height: 240px;
+  }
+  .listinfo {
+    opacity: 1;
+    position: static;
+    transform: none;
+    padding: 12px;
+  }
+  .listinfo h5 {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  /* Mini project 슬라이더 화살표 */
+  .minimalList .controls .prev,
+  .minimalList .controls .next {
+    font-size: 40px;
+  }
+  .minimalList .controls .prev {
+    right: calc(100% + 2px);
+  }
+  .minimalList .controls .next {
+    left: calc(100% + 2px);
+  }
+
+  /* Contact */
+  .contact .content {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .contact .myInfo {
+    padding: 40px 20px;
+  }
+  .contact input,
+  .contact textarea {
+    height: auto;
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 16px;
+  }
+}
+
+/* 좁은 모바일 */
+@media (max-width: 480px) {
+  .main .typeText,
+  .main .text {
+    font-size: 30px;
+  }
+  .listinfo h5 {
+    font-size: 16px;
+  }
+  .minimalList .controls .prev,
+  .minimalList .controls .next {
+    font-size: 30px;
+  }
+}

@@ -1,31 +1,30 @@
-import { useState, useEffect } from "react";
 import { TailSpin } from "react-loader-spinner";
 
+// 화면 전체를 덮는 중앙 정렬 로딩 오버레이.
+// 표시/숨김은 부모(App)가 마운트/언마운트로 제어한다.
+// (예전에는 여기 2초 타이머가 있어, CDN 로드가 2초보다 오래 걸리면
+//  스피너가 먼저 사라져 빈 화면이 됐다. 그 타이머를 제거했다.)
 const Loading = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // 2초 후 로딩 상태를 false로 변경
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000); // 2000ms = 2초
-
-    return () => clearTimeout(timer); // 컴포넌트 언마운트 시 타이머를 클리어
-  }, []);
-
   return (
-    loading && (
+    <div
+      style={{
+        position: "fixed",
+        inset: 0,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#121212",
+        zIndex: 9999,
+      }}
+    >
       <TailSpin
-        visible={loading}
         height="80"
         width="80"
         color="#4fa94d"
         ariaLabel="tail-spin-loading"
         radius="1"
-        wrapperStyle={{}}
-        wrapperClass=""
       />
-    )
+    </div>
   );
 };
 

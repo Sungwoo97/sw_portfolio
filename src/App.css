@@ -270,3 +270,66 @@ footer p {
   text-transform: uppercase;
   letter-spacing: 2.2%;
 }
+
+/* =========================================================
+   RESPONSIVE — 헤더/푸터. 데스크톱 규칙 아래에 추가.
+   ========================================================= */
+
+/* 어떤 화면에서도 가로 스크롤이 생기지 않도록 (넘치는 요소 대비 안전망) */
+html,
+body {
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  /* 헤더: 250px 짜리 큰 간격과 24px 글자를 모바일에 맞게 축소 */
+  header nav {
+    height: 64px;
+    align-items: center;
+  }
+  header nav > div {
+    gap: 16px;
+    width: 100%;
+  }
+  header nav > div > ul {
+    padding: 0 12px;
+    gap: 16px;
+    width: 100%;
+  }
+  header nav ul > li > ul {
+    gap: 14px;
+  }
+  header nav ul > li > ul > li {
+    line-height: normal;
+  }
+  header nav ul > li > ul > li > a {
+    font-size: 14px;
+  }
+  header nav .logo {
+    width: 96px;
+    height: 48px;
+    background-size: contain;
+  }
+
+  /* 푸터: 고정 높이·큰 간격 해제하고 세로로 쌓음 */
+  footer {
+    height: auto;
+    margin-top: 80px;
+    padding: 30px 16px 15px;
+  }
+  footer .footer_head {
+    flex-wrap: wrap;
+    gap: 20px;
+    left: 0;
+  }
+  footer .icons {
+    gap: 24px;
+  }
+  footer .bottom_nav {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}

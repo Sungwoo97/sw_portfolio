@@ -26,15 +26,18 @@ function App() {
       });
     };
 
+    // CDN 이 느리거나 응답이 없어도 무한 대기하지 않도록 안전 타임아웃(6초)
+    const fallback = setTimeout(() => setIsCDNLoaded(true), 6000);
+
     loadCDNResources()
       .then(() => {
-        // console.log(message); // 성공적으로 CDN 로드됨
-        setIsCDNLoaded(true); // CDN이 로드되었음을 표시
+        setIsCDNLoaded(true); // CDN 로드 성공
       })
       .catch((error) => {
-        console.error(error); // CDN 로드 실패 시
-        setIsCDNLoaded(true); // CDN 로드 실패 후에도 로딩 종료
-      });
+        console.error(error); // CDN 로드 실패 시에도 앱은 띄운다
+        setIsCDNLoaded(true);
+      })
+      .finally(() => clearTimeout(fallback));
   }, []);
 
   return (
