@@ -80,35 +80,41 @@ const HelmetComp = () => {
 
       <meta
         name="description"
-        content="책임감과 소통 능력이 강점인 남성우 포트폴리오 사이트입니다"
+        content="PHP 백엔드 개발자 남성우의 포트폴리오입니다. 그누보드·영카트 기반 웹사이트 개발과 PHP 서버 개발, 웹사이트 관리 및 서버 설정을 다룹니다."
       />
       <meta
         name="keywords"
-        content="Portfolio, Web Portfolio, FrontEnd Portfolio, Front-End, 웹 포트폴리오, 포트폴리오, 프론트엔드 포트폴리오, 남성우,"
+        content="남성우, PHP 백엔드 개발자, 백엔드 개발자, Back-End, PHP 개발자, 그누보드, 영카트, 그누보드 개발, 영카트 커스터마이징, Gnuboard, Youngcart, PHP, MySQL, 웹 개발자, 웹 포트폴리오, 포트폴리오, Backend Portfolio, 서버 개발, 웹사이트 관리, 서버 관리"
       />
       <meta name="author" content="남성우" />
       <meta name="robots" content="index, follow" />
+      <link rel="canonical" href="https://sw-portfolio-iota.vercel.app/" />
 
       <meta property="og:title" content=" 남성우 포트폴리오 | Soft Web " />
       <meta
         property="og:description"
-        content="책임감과 소통 능력이 강점인 남성우 포트폴리오 사이트입니다."
+        content="PHP 백엔드 개발자 남성우의 포트폴리오. 그누보드·영카트 기반 웹 개발과 PHP 서버 개발."
       />
-      <meta property="og:image" content="./img/sw_logo.png" />
-      <meta property="og:image:alt" content="SW 포트폴리오 대표 이미지" />
-      <meta
-        property="og:url"
-        content="https://sw-portfolio-site.netlify.app/"
-      />
+      <meta property="og:image" content="https://sw-portfolio-iota.vercel.app/img/sw_logo.png" />
+      <meta property="og:image:alt" content="남성우 PHP 백엔드 포트폴리오 대표 이미지" />
+      <meta property="og:image:width" content="600" />
+      <meta property="og:image:height" content="315" />
+      <meta property="og:url" content="https://sw-portfolio-iota.vercel.app/" />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="SW Portfolio" />
       <meta property="og:locale" content="ko_KR" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="남성우 포트폴리오 | Soft Web" />
+      <meta name="twitter:description" content="PHP 백엔드 개발자 남성우의 포트폴리오. 그누보드·영카트 기반 웹 개발과 PHP 서버 개발." />
+      <meta name="twitter:image" content="https://sw-portfolio-iota.vercel.app/img/sw_logo.png" />
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "남성우",
-          url: "https://sw-portfolio-site.netlify.app/",
+          jobTitle: "PHP 백엔드 개발자",
+          url: "https://sw-portfolio-iota.vercel.app/",
           sameAs: [
             "https://github.com/Sungwoo97",
             "https://jagged-periwinkle-b90.notion.site/174906281d3380d3a4a3f0be8e09c88b",
