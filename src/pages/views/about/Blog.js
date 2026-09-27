@@ -14,7 +14,7 @@ const Blog = () => {
         <img src="./img/github.svg" width="50" alt="github" />
       </a>
       <a
-        href="https://docs.google.com/document/d/1Vm1GM5CeF7pqzwP2-ePtYEHTCFmmTraze0INLYcPLpk/edit?usp=drive_link"
+        href="https://docs.google.com/document/d/1Vm1GM5CeF7pqzwP2-ePtYEHTCFmmTraze0INLYcPLpk/edit?tab=t.0#heading=h.gjdgxs"
         target="_blank"
         rel="noreferrer"
       >

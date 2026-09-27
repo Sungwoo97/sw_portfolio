@@ -8,9 +8,9 @@ const About = () => {
         <img src="./img/profile_image.png" alt="개발환경 사진" />
       </div>
       <div className="desc col-md-8">
-        <h3>부드러운 웹 개발을 꿈꾸며</h3>
+        <h3>여러 프로젝트를 책임지며</h3>
         <h4>
-          안녕하세요! 저는 신입 웹 개발자 <em>남성우</em>입니다.
+          기준을 만들어 온 개발자 <em>남성우</em>입니다.
         </h4>
         <p>
           코드는 단순한 언어가 아니라 세상을 연결하는 다리가 될 수 있다고
