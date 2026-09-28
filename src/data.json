@@ -80,6 +80,54 @@
         "github": "http://3.39.192.39/qc/index.php",
         "live": "http://3.39.192.39/qc/index.php"
       }
+    },
+    {
+      "id": 5,
+      "title": "서비스 접수 ERP",
+      "duration": "2026.09.07 ~ 2026.09.09",
+      "details": [
+        "그누보드5 기반 범용 서비스 접수 ERP",
+        "서비스 종류와 단가를 데이터로 관리",
+        "접수·작업자 배정·보고서·정산 기능 구현",
+        "LMS 주문 데이터 단방향 연동"
+      ],
+      "image": "./img/upload/service_erp.png",
+      "links": {
+        "github": "https://github.com/Sungwoo97/ERP_Project",
+        "live": "https://sungwoo-lms.duckdns.org/erp/"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Quantum Code LMS",
+      "duration": "2024.10.23 ~ 2024.12.23 / 이후 개인 고도화",
+      "details": [
+        "교육과정 팀 프로젝트 기반 개인 고도화",
+        "실제 결제 승인·실패·환불 흐름 구현",
+        "결제 완료 상태 기반 수강 권한 관리",
+        "관리자·강사별 매출 집계 범위 분리"
+      ],
+      "image": "./img/upload/quantum_code_lms.png",
+      "links": {
+        "github": "https://github.com/Sungwoo97/quantumcode_LMS_Project",
+        "live": "https://sungwoo-lms.duckdns.org/qc/"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Cat-Log 묘생일기",
+      "duration": "2026.03.09 ~ 현재",
+      "details": [
+        "Laravel 기반 멀티유저 블로그",
+        "회원 인증과 게시글 CRUD 구현",
+        "카테고리·태그·검색 및 관리자 기능 구현",
+        "Docker 기반 환경 구성 및 실제 서버 배포"
+      ],
+      "image": "./img/upload/cat_log_diary.png",
+      "links": {
+        "github": "https://github.com/Sungwoo97/cat-diary",
+        "live": "https://sungwoo-lms.duckdns.org/diary/"
+      }
     }
   ],
   "mini": [
@@ -96,13 +144,19 @@
       "id": 2,
       "title": "React Board",
       "image": "./img/upload/react_board.png",
-      "description": ["React를 이용한 게시판 제작", "기본적인 CRUD 기능을 구현"]
+      "description": [
+        "React를 이용한 게시판 제작",
+        "기본적인 CRUD 기능을 구현"
+      ]
     },
     {
       "id": 3,
       "title": "PHP Board",
       "image": "./img/upload/php_board.png",
-      "description": ["PHP를 이용한 게시판 제작", "기본적인 CRUD 기능을 구현"]
+      "description": [
+        "PHP를 이용한 게시판 제작",
+        "기본적인 CRUD 기능을 구현"
+      ]
     }
   ],
   "work": [
@@ -147,7 +201,11 @@
       "id": "1",
       "title": "Let's Korail Renewal Project",
       "member_count": 1,
-      "skills": ["HTML", "CSS", "JavaScript"],
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
       "links": {
         "github": "https://sungwoo97.github.io/lets_korail_renewal/",
         "live": "https://sungwoo97.github.io/lets_korail_renewal/"
@@ -204,7 +262,13 @@
       "id": "2",
       "title": "KIA Renewal Project",
       "member_count": 4,
-      "skills": ["HTML", "CSS", "JavaScript", "JQuery", "Libraries"],
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "JQuery",
+        "Libraries"
+      ],
       "links": {
         "github": "https://sungwoo97.github.io/KIA-Renewal-Project/",
         "live": "https://sungwoo97.github.io/KIA-Renewal-Project/"
@@ -401,6 +465,212 @@
             "issue": "개발 중 팀원 간 코드 스타일과 구현 방식의 차이로 갈등이 발생했습니다. 무엇에 집중할지에 대한 의견 차이도 존재했습니다.",
             "cause": "각 팀원의 개발 스타일과 접근 방식이 달라 초기에는 조율에 어려움이 있었습니다. 그러나 이는 팀원들이 각자의 강점과 경험을 바탕으로 해결책을 제시하려는 의지가 있음을 보여주었습니다.",
             "solution": "각 팀원의 의견을 존중하며 팀 전체가 동의할 수 있는 공통의 기준을 설정하였습니다. 중요한 기능에 우선순위를 두어 개발 방향을 명확히 했으며, 이를 통해 팀원 간의 의견 차이를 해소하고 프로젝트를 성공적으로 완료할 수 있었습니다."
+          }
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "서비스 접수 ERP",
+      "member_count": 1,
+      "skills": [
+        "PHP 8.2",
+        "MySQL 8.0",
+        "그누보드5",
+        "Docker",
+        "Caddy",
+        "PhpSpreadsheet"
+      ],
+      "links": {
+        "github": "https://github.com/Sungwoo97/ERP_Project",
+        "live": "https://sungwoo-lms.duckdns.org/erp/"
+      },
+      "features": [
+        "서비스 종류와 단가 체계를 코드가 아닌 데이터로 관리",
+        "정액·수량별·구간별 단가 계산과 계산 시점 금액 스냅샷 저장",
+        "알바·직원·대표·관리자 4단계 권한 및 조회 범위 분리",
+        "접수·작업자 배정·보고서·정산·엑셀 다운로드 기능 구현",
+        "LMS 주문 데이터를 ERP 접수로 가져오는 단방향 연동",
+        "외부 주문번호 고유 제약을 이용한 중복 동기화 방지",
+        "QC와 ERP를 같은 도메인의 서로 다른 경로로 통합 배포"
+      ],
+      "overview": [
+        "특정 업종에 종속되어 있던 서비스 접수 시스템을 업종이 달라져도 사용할 수 있는 범용 ERP 구조로 재설계한 개인 프로젝트입니다.",
+        "서비스 종류와 요금 체계를 별도 테이블에서 관리하고, 접수·작업자 배정·보고서·정산을 권한별 업무 흐름에 맞게 구성했습니다.",
+        "Quantum Code LMS의 확정 주문 데이터를 원본 시스템 수정 없이 ERP 접수 데이터로 가져오는 연동 기능을 구현해 두 프로젝트를 하나의 업무 흐름으로 연결했습니다."
+      ],
+      "attach": [
+        {
+          "image": "./../img/upload/service_erp.png",
+          "description": "서비스 접수 ERP 프로젝트 썸네일"
+        }
+      ],
+      "contribution": [
+        "기존 그누보드5 구조를 분석하고 ERP 전용 테이블, 단가 계산 로직, 권한 정책과 외부 시스템 연동을 직접 설계하고 구현했습니다.",
+        "ERP 본체와 관리자 서비스 설정, 데이터베이스 스키마, 데모 데이터와 Docker·Caddy 배포 구성을 담당했습니다.",
+        "금액은 화면 입력을 신뢰하지 않고 서버에서 다시 계산했으며, 저장·삭제 기능의 CSRF 검증과 업로드 디렉터리의 PHP 실행 차단을 추가했습니다."
+      ],
+      "problems": [
+        {
+          "title": "서비스 종류 확장 한계",
+          "details": {
+            "issue": "서비스 종류와 선택값이 코드와 게시판 여분 칼럼에 고정되어 새로운 종류를 추가하기 어려웠습니다.",
+            "cause": "서비스 정의와 접수 데이터가 분리되지 않아 여분 칼럼 열 개를 모두 사용하고 있었습니다.",
+            "solution": "서비스 종류와 접수별 선택 항목을 별도 테이블로 분리해 관리자 설정만으로 서비스 종류를 확장할 수 있도록 변경했습니다."
+          }
+        },
+        {
+          "title": "과거 접수 금액 변경 위험",
+          "details": {
+            "issue": "관리자가 단가를 변경하면 과거 접수 건의 청구 금액도 달라질 수 있었습니다.",
+            "cause": "조회 시점의 현재 단가를 이용해 금액을 다시 계산하는 구조였습니다.",
+            "solution": "접수 당시 계산된 금액을 항목별 스냅샷으로 저장해 이후 단가 변경이 과거 데이터에 영향을 주지 않도록 했습니다."
+          }
+        },
+        {
+          "title": "LMS 데이터 중복 동기화",
+          "details": {
+            "issue": "동일한 LMS 주문을 여러 번 가져올 경우 ERP 접수가 중복 생성될 수 있었습니다.",
+            "cause": "두 시스템 사이에서 원본 주문을 식별하는 기준이 없었습니다.",
+            "solution": "원본 주문번호를 외부 참조값으로 저장하고 고유 제약을 적용해 동기화를 반복해도 접수가 중복되지 않도록 했습니다."
+          }
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Quantum Code LMS",
+      "member_count": 3,
+      "skills": [
+        "PHP",
+        "MySQL",
+        "JavaScript",
+        "jQuery",
+        "Composer",
+        "Payment API",
+        "Docker"
+      ],
+      "links": {
+        "github": "https://github.com/Sungwoo97/quantumcode_LMS_Project",
+        "live": "https://sungwoo-lms.duckdns.org/qc/"
+      },
+      "features": [
+        "결제 요청 전 결제 대기 주문 및 주문 항목 생성",
+        "서버의 주문 정보와 결제금액 검증 후 결제 API 승인",
+        "결제 승인 실패와 사용자 취소 이력 보존",
+        "결제 완료 상태를 기준으로 수강 권한 부여",
+        "환불 완료 후 수강 권한 회수",
+        "실제 결제 데이터를 이용한 총매출·월별·강의별 매출 집계",
+        "관리자 전체 매출과 강사별 담당 강의 매출 범위 분리"
+      ],
+      "overview": [
+        "교육과정에서 팀으로 제작한 순수 PHP 기반 LMS를 취업 후 개인적으로 고도화한 프로젝트입니다.",
+        "팀 프로젝트 당시 강의와 매출 데이터 영역을 담당했으며, 이후 기존 강의 신청·결제 구조를 분석해 실제 결제 승인·실패·환불과 수강 권한 관리가 가능한 흐름으로 개선했습니다.",
+        "가상 매출 데이터를 실제 결제 완료 주문 기준의 집계 방식으로 변경하고, 관리자와 강사의 조회 범위를 역할에 따라 분리했습니다."
+      ],
+      "attach": [
+        {
+          "image": "./../img/upload/quantum_code_lms.png",
+          "description": "Quantum Code LMS 프로젝트 썸네일"
+        }
+      ],
+      "contribution": [
+        "초기 개발은 3인 팀 프로젝트로 진행했으며 사용자 강의 목록과 관리자 강의·매출 관리 영역을 담당했습니다.",
+        "교육과정 종료 후 결제 대기 주문 생성, 서버 측 금액 검증, 결제 API 승인과 실패 상태 처리 기능을 개인적으로 추가했습니다.",
+        "환불 완료 후 수강 권한을 회수하고 실제 결제 데이터를 기준으로 관리자 전체 매출과 강사별 매출을 집계하도록 고도화했습니다.",
+        "민감한 설정값을 환경설정으로 분리하고 Docker 기반 실행 및 실서버 배포 환경을 정리했습니다."
+      ],
+      "problems": [
+        {
+          "title": "결제 승인 전 주문 이력 관리",
+          "details": {
+            "issue": "결제 API 승인에 실패하거나 사용자가 결제창을 취소하면 주문 과정을 추적하기 어려웠습니다.",
+            "cause": "결제 성공 이후에만 주문을 확정하는 방식으로는 실패 시점의 주문 정보를 보존하기 어려웠습니다.",
+            "solution": "결제창 호출 전에 대기 주문을 생성하고 승인 실패나 취소 시 주문 항목을 실패 상태로 변경해 이력을 유지했습니다."
+          }
+        },
+        {
+          "title": "화면 결제금액 조작 가능성",
+          "details": {
+            "issue": "클라이언트에서 전달한 결제금액을 그대로 승인하면 주문금액과 다른 금액이 처리될 수 있었습니다.",
+            "cause": "결제 요청값과 서버에 저장된 주문 데이터의 일치 여부를 확인하는 과정이 필요했습니다.",
+            "solution": "서버에서 주문번호와 결제금액을 다시 확인하고 일치하는 경우에만 결제 승인 API를 호출하도록 구성했습니다."
+          }
+        },
+        {
+          "title": "가상 매출 데이터 사용",
+          "details": {
+            "issue": "관리자와 강사 매출 화면이 실제 주문이 아닌 별도 가상 데이터를 기준으로 표시되고 있었습니다.",
+            "cause": "결제 상태와 강의·강사 관계를 함께 반영하는 집계 기준이 정리되지 않았습니다.",
+            "solution": "결제 완료 주문 항목만 집계하고 강사는 본인이 등록한 강의만 조회하도록 동일한 결제 데이터 기준으로 집계를 통일했습니다."
+          }
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Cat-Log 묘생일기",
+      "member_count": 1,
+      "skills": [
+        "Laravel 12",
+        "PHP 8.2",
+        "Blade",
+        "Eloquent",
+        "MySQL",
+        "Docker"
+      ],
+      "links": {
+        "github": "https://github.com/Sungwoo97/cat-diary",
+        "live": "https://sungwoo-lms.duckdns.org/diary/"
+      },
+      "features": [
+        "회원가입·로그인·로그아웃과 세션 기반 인증",
+        "게시글 작성·조회·수정·삭제 및 이미지 업로드",
+        "공개 게시글 목록과 사용자별 내 글 관리",
+        "카테고리와 태그를 이용한 게시글 분류",
+        "제목 및 태그 검색과 페이지네이션",
+        "관리자 대시보드와 회원·게시글·카테고리 관리",
+        "Docker 기반 개발 환경과 실제 서버 하위 경로 배포"
+      ],
+      "overview": [
+        "Laravel의 MVC 구조와 Eloquent 관계 설정을 학습하기 위해 제작한 멀티유저 블로그 프로젝트입니다.",
+        "비로그인 사용자는 공개 글을 조회할 수 있고, 로그인 사용자는 자신의 게시글과 이미지를 관리할 수 있도록 인증과 권한 범위를 구분했습니다.",
+        "카테고리·태그·검색과 관리자 기능을 구현하고 Docker 기반 환경을 구성해 실제 서버의 /diary 경로에 배포했습니다."
+      ],
+      "attach": [
+        {
+          "image": "./../img/upload/cat_log_diary.png",
+          "description": "Cat-Log 묘생일기 프로젝트 썸네일"
+        }
+      ],
+      "contribution": [
+        "Laravel 프로젝트 구성부터 데이터 모델, 인증, 게시글 CRUD와 관리자 기능을 개인적으로 설계하고 구현했습니다.",
+        "게시글과 사용자·카테고리·태그 관계를 Eloquent 모델로 구성하고 로그인 여부와 작성자 권한에 따라 기능 접근을 제한했습니다.",
+        "Docker 기반 실행 환경을 정리하고 웹 서버의 하위 경로에서도 라우트와 세션이 정상 작동하도록 배포했습니다."
+      ],
+      "problems": [
+        {
+          "title": "게시글 검색과 목록 캐시 병행",
+          "details": {
+            "issue": "메인 목록 캐시를 유지하면서 제목과 태그 검색 결과를 즉시 제공해야 했습니다.",
+            "cause": "검색어마다 캐시 키를 확장하면 관리 범위가 커지고 검색 결과가 오래 남을 수 있었습니다.",
+            "solution": "일반 목록은 페이지별 캐시를 유지하고 검색 요청은 별도의 쿼리로 처리해 최신 검색 결과와 목록 성능을 분리했습니다."
+          }
+        },
+        {
+          "title": "에디터 내용을 다른 폼에 연결하는 문제",
+          "details": {
+            "issue": "화면에 여러 폼이 있을 때 게시글 에디터 내용이 의도하지 않은 폼 제출 이벤트에 연결될 가능성이 있었습니다.",
+            "cause": "첫 번째 form 요소를 포괄적으로 선택하는 방식으로 제출 이벤트를 등록했습니다.",
+            "solution": "게시글 폼에 고유 ID를 부여하고 해당 폼의 제출 시점에만 에디터 내용을 hidden 필드에 저장하도록 수정했습니다."
+          }
+        },
+        {
+          "title": "GitHub와 배포본 불일치",
+          "details": {
+            "issue": "검색 기능 등 배포 서버에 반영된 변경이 GitHub main 브랜치에는 포함되지 않은 상태가 발생했습니다.",
+            "cause": "배포와 Git 커밋이 별도 흐름으로 진행되고 동일 저장소를 바라보는 로컬 폴더도 두 개 존재했습니다.",
+            "solution": "기준 작업 폴더를 하나로 정하고 배포 서버와 차이를 확인한 뒤 기능 변경과 문서 변경을 분리해 GitHub에 반영하는 동기화 절차를 정리했습니다."
           }
         }
       ]

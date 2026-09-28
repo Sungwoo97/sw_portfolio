@@ -10,7 +10,7 @@ const Footer = () => {
           </h2>
           <ul className="icons">
             <li>
-              <a href="/" aria-label="email">
+              <a href="mailto:Gwaja97@gmail.com" aria-label="email">
                 <img src="../img/footer_email.svg" alt="" />
               </a>
             </li>
@@ -34,11 +34,11 @@ const Footer = () => {
                 <img src="../img/footer_notion.svg" alt="notion" />
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="/" aria-label="insta">
                 <img src="../img/footer_instagram.svg" alt="insta" />
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
         <ul className="bottom_nav">

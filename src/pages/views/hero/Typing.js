@@ -6,11 +6,11 @@ const Typing = () => {
     <div className="text-container">
       <TypeAnimation
         sequence={[
-          "BACK-END", // Types 'One'
+          "PHP BACK-END", // Types 'One'
           4000, // Waits 1s
           "", // Types 'One'
           2000, // Waits 1s
-          "SOFT WEB", // Deletes 'One' and types 'Two'
+          "WEB DEVELOPER", // Deletes 'One' and types 'Two'
           4000, // Waits 2s
           "", // Types 'One'
           2000, // Waits 1s

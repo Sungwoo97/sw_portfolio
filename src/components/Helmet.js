@@ -105,15 +105,16 @@ const HelmetComp = () => {
       <meta property="og:locale" content="ko_KR" />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="남성우 포트폴리오 | Soft Web" />
-      <meta name="twitter:description" content="PHP 백엔드 개발자 남성우의 포트폴리오. 그누보드·영카트 기반 웹 개발과 PHP 서버 개발." />
+      <meta name="twitter:title" content="남성우 | PHP 백엔드·웹 개발자 포트폴리오" />
+      <meta name="twitter:description" content="PHP·그누보드·영카트 기반 웹 개발과 운영 유지보수, 데이터베이스 설계 및 레거시 PHP 호환성 개선 경험을 정리한
+남성우의 경력 포트폴리오입니다." />
       <meta name="twitter:image" content="https://sw-portfolio-iota.vercel.app/img/sw_logo.png" />
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "남성우",
-          jobTitle: "PHP 백엔드 개발자",
+          jobTitle: "PHP 백엔드·웹 개발자",
           url: "https://sw-portfolio-iota.vercel.app/",
           sameAs: [
             "https://github.com/Sungwoo97",

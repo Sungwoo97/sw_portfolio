@@ -6,7 +6,7 @@ const ContactView = ({ profile }) => {
   return (
     <section className="contact container" id="contact">
       <div className="content row">
-        <h4>책임감 강하고 열정있는 신입을 원한다면 이쪽으로 연락주세요</h4>
+        <h4>PHP 실무 경험을 갖춘 개발자를 찾고 계신다면 연락해 주세요.</h4>
         <Profile profile={profile} />
         <ContactForm />
       </div>
