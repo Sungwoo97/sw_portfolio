@@ -144,19 +144,13 @@
       "id": 2,
       "title": "React Board",
       "image": "./img/upload/react_board.png",
-      "description": [
-        "React를 이용한 게시판 제작",
-        "기본적인 CRUD 기능을 구현"
-      ]
+      "description": ["React를 이용한 게시판 제작", "기본적인 CRUD 기능을 구현"]
     },
     {
       "id": 3,
       "title": "PHP Board",
       "image": "./img/upload/php_board.png",
-      "description": [
-        "PHP를 이용한 게시판 제작",
-        "기본적인 CRUD 기능을 구현"
-      ]
+      "description": ["PHP를 이용한 게시판 제작", "기본적인 CRUD 기능을 구현"]
     }
   ],
   "work": [
@@ -201,11 +195,7 @@
       "id": "1",
       "title": "Let's Korail Renewal Project",
       "member_count": 1,
-      "skills": [
-        "HTML",
-        "CSS",
-        "JavaScript"
-      ],
+      "skills": ["HTML", "CSS", "JavaScript"],
       "links": {
         "github": "https://sungwoo97.github.io/lets_korail_renewal/",
         "live": "https://sungwoo97.github.io/lets_korail_renewal/"
@@ -262,13 +252,7 @@
       "id": "2",
       "title": "KIA Renewal Project",
       "member_count": 4,
-      "skills": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "JQuery",
-        "Libraries"
-      ],
+      "skills": ["HTML", "CSS", "JavaScript", "JQuery", "Libraries"],
       "links": {
         "github": "https://sungwoo97.github.io/KIA-Renewal-Project/",
         "live": "https://sungwoo97.github.io/KIA-Renewal-Project/"
@@ -343,8 +327,8 @@
         "AWS"
       ],
       "links": {
-        "github": "http://3.39.192.39/qc/admin/login.php",
-        "live": "http://3.39.192.39/qc/admin/login.php"
+        "github": "https://sungwoo-lms.duckdns.org/qc/admin/login.php",
+        "live": "https://sungwoo-lms.duckdns.org/qc/admin/login.php"
       },
       "features": [
         "PHP를 활용해 데이터베이스와 연동한 CRUD 기능의 관리자 페이지 구현",
@@ -411,8 +395,8 @@
         "AWS"
       ],
       "links": {
-        "github": "http://3.39.192.39/qc/index.php",
-        "live": "http://3.39.192.39/qc/index.php"
+        "github": "https://sungwoo-lms.duckdns.org/qc/index.php",
+        "live": "https://sungwoo-lms.duckdns.org/qc/index.php"
       },
       "features": [
         "PHP를 활용한 데이터베이스와 연동된 CRUD 기능 구현",
